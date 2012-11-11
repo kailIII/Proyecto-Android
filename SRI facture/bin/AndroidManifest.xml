@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name="sri.facture.MainActivity"
             android:label="@string/title_activity_main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +20,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <provider android:name="sri.facture.providers.UsuarioProvider"
+                  android:authorities="sriFacture.proveedor.Usuario" />
+        <provider android:name="sri.facture.providers.FacturaProvider"
+                  android:authorities="sriFacture.proveedor.Factura" />
+        <provider android:name="sri.facture.providers.CategoriaProvider"
+                  android:authorities="sriFacture.proveedor.Categoria" />
+        <provider android:name="sri.facture.providers.DeducibleProvider"
+                  android:authorities="sriFacture.proveedor.Deducible" />
+        <provider android:name="sri.facture.providers.ImagenProvider"
+                  android:authorities="sriFacture.proveedor.Imagen" />
+        
     </application>
 
 </manifest>
