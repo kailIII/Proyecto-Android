@@ -3,13 +3,18 @@ package sri.facture;
 
 
 
+import sri.facture.bd.DatabaseHelper;
 import sri.facture.providers.CategoriaProvider;
+
 import com.sri.facture.R;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.view.Menu;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -17,38 +22,41 @@ public class MainActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.beta_login);
         
-        Cursor c = managedQuery(CategoriaProvider.CONTENT_URI, null, null, null, null);
-
-        if(c != null){
-	        if (c.moveToFirst())
-	        {
-	            do
-	            {
-	               int id = c.getInt(c.getColumnIndex(CategoriaProvider._ID));
-	               String nom = c.getString(c.getColumnIndex(CategoriaProvider.NOMBRE));
-	               
-	               Toast toastNotifica = Toast.makeText(getApplicationContext(), "Aqui: " + id + ">>" + nom, Toast.LENGTH_LONG);
-	               toastNotifica.show();
-	         
-	            } while (c.moveToNext());
-	        }
-        }
-        else{
-        	Toast toastNotifica = Toast.makeText(getApplicationContext(), "Falla el cursor", Toast.LENGTH_LONG);
-            toastNotifica.show();
-        }
-
-//Aqui un comentario
-        // Aqui otro comentario
-        //Mas comentarios
-        //seguimos con comentarios
+        
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
+    }
+    
+    public void ingreso(View view){
+    	String usuario=((EditText) findViewById(R.id.user)).getText().toString();
+    	String pass=((EditText) findViewById(R.id.pass)).getText().toString();
+    	if(usuario.trim().isEmpty()||pass.trim().isEmpty()){
+			Toast.makeText(this,"Faltan campos por completar", Toast.LENGTH_SHORT).show();
+		}
+    	
+    	else{
+    		DatabaseHelper usdbh =  new DatabaseHelper(this, "sri-facture.db", null, 1); 	 	  
+        	SQLiteDatabase db = usdbh.getWritableDatabase();
+        	Cursor c =  db.rawQuery( "select * from usuario where user='"+usuario+"' and pass='"+pass+"';", null);
+        	if ( c.moveToFirst() ) {
+        		Toast.makeText(this,"Ingreso exitoso", Toast.LENGTH_SHORT).show();
+        	}
+        	else{
+        		Toast.makeText(this,"Redirigiendo a nuevo usuario", Toast.LENGTH_SHORT).show();
+        	}
+        	usdbh.close();
+
+    	}
+
+    }
+    
+    public void recover(View view){
+    	Toast.makeText(this,"Redirigiendo a recuperar contraseña", Toast.LENGTH_SHORT).show();
     }
 }

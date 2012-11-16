@@ -4,5 +4,23 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
+<!-- STRINGS USADOS PARA TEXTVIEWS-->
 
+<!-- LOGIN -->
+
+	<string name="user">Usuario</string>
+	<string name="pass">Contraseña</string>
+	<string name="pass_recover">Olvido su contraseña</string>
+	
+	
+<!-- STRINGS USADOS EN BOTONES-->
+
+<!-- LOGIN -->
+	<string name="ingresar">Ingresar</string>	
+	
+	
+<!-- STRINGS USADOS EN ACCIONES-->	
+<!-- LOGIN -->
+	<string name="ingreso">ingreso</string>
+	<string name="recover">recover</string>
 </resources>

@@ -19,14 +19,15 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseHelper extends SQLiteOpenHelper{
     public static final String DATABASE_NAME = "sri-facture.db";
     public static final int DATABASE_VERSION = 1;
-       
+    private static int BAND_FIRTS_TIME = 0;
+   
     public static final String FICHERO_LOCAL_DATABASE_NAME = "schema_sri-facture.sqlite";
-    private Context context;
+    private Context contexto;
     
     /*Constructor tipico*/
     public DatabaseHelper(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-        this.context = context;
+        this.contexto = context;
         iniBase();
     }
 
@@ -34,7 +35,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public DatabaseHelper(Context context, String name, CursorFactory factory,
             int version) {
         super(context, name, factory, version);
-        this.context = context;
+        this.contexto = context;
     }
 
     @Override
@@ -71,22 +72,23 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
     
     public void iniBase(){
-    	android.util.Log.w("DB", "CREANDO..");
-    	try{
-            String destPath = "/data/data/" + this.context.getPackageName()
-                    + "/databases/" + DatabaseHelper.DATABASE_NAME;
-            File file = new File(destPath);
-            if (!file.exists()) {
-            	android.util.Log.w("DB", "NO EXISTE");
-                copyDB(this.context.getAssets().open(DatabaseHelper.FICHERO_LOCAL_DATABASE_NAME), new FileOutputStream(destPath));
-            }
-            else
-            	android.util.Log.w("DB", "EXISTE");
-        } catch(FileNotFoundException e) {
-        	android.util.Log.w("DB", "error FILE: " +e.toString());
-        } catch (IOException e){
-        	android.util.Log.w("DB", "error IO: "+e.toString());
+        android.util.Log.w("DB", "CREANDO..");
+        try{
+    String destPath = "/data/data/" + this.contexto.getPackageName()
+            + "/databases/" + DatabaseHelper.DATABASE_NAME;
+    File file = new File(destPath);
+    if (file.exists() && BAND_FIRTS_TIME == 0) {
+        android.util.Log.w("DB", "NO EXISTE");
+        copyDB(this.contexto.getAssets().open(DatabaseHelper.FICHERO_LOCAL_DATABASE_NAME), new FileOutputStream(destPath));
+                                                       BAND_FIRTS_TIME++;
+    }
+    else
+        android.util.Log.w("DB", "EXISTE");
+} catch(FileNotFoundException e) {
+        android.util.Log.w("DB", "error FILE: " +e.toString());
+} catch (IOException e){
+        android.util.Log.w("DB", "error IO: "+e.toString());
+}
+                      
         }
-		
-	}
 }

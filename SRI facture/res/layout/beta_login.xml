@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/user" />
+
+        <EditText
+            android:id="@+id/user"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ems="10" >
+
+				<requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/pass" />
+
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ems="10" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:onClick="@string/ingreso"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/ingresar"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/ingresar" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+			android:onClick="@string/recover"			>
+
+            <TextView
+                android:id="@+id/recover"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/pass_recover" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
