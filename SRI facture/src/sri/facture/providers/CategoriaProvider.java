@@ -78,9 +78,9 @@ public class CategoriaProvider extends ContentProvider {
     public String getType(Uri uri) {
         switch (uriMatcher.match(uri)) {
             case ACTIVIDADES:
-                return "vnd.android.cursor.dir/vnd.effectiveRutine."+ENTIDAD;
+                return "vnd.android.cursor.dir/vnd.sriFacture."+ENTIDAD;
             case ACTIVIDAD_ID:
-                return "vnd.android.cursor.item/vnd.effectiveRutine."+ENTIDAD;
+                return "vnd.android.cursor.item/vnd.sriFacture."+ENTIDAD;
             default:
                 return null;
         }

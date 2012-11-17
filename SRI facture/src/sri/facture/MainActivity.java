@@ -6,10 +6,12 @@ package sri.facture;
 import sri.facture.bd.DatabaseHelper;
 import sri.facture.providers.CategoriaProvider;
 
+
 import com.sri.facture.R;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.view.Menu;
@@ -56,7 +58,9 @@ public class MainActivity extends Activity {
 
     }
     
-    public void recover(View view){
-    	Toast.makeText(this,"Redirigiendo a recuperar contraseña", Toast.LENGTH_SHORT).show();
+    public void registro(View view){
+    	//Toast.makeText(this,"Redirigiendo a recuperar contraseña", Toast.LENGTH_SHORT).show();
+    	Intent i = new Intent(this, NewUser.class);
+        startActivity(i);
     }
 }

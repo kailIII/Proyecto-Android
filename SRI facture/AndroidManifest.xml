@@ -31,6 +31,8 @@
                   android:authorities="sriFacture.proveedor.Deducible" />
         <provider android:name="sri.facture.providers.ImagenProvider"
                   android:authorities="sriFacture.proveedor.Imagen" />
+        <activity android:name="sri.facture.NewUser"></activity>
+        <activity android:name="sri.facture.Menu"></activity>
         
     </application>
 

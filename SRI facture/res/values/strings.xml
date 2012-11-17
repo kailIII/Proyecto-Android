@@ -8,19 +8,52 @@
 
 <!-- LOGIN -->
 
-	<string name="user">Usuario</string>
-	<string name="pass">Contraseña</string>
-	<string name="pass_recover">Olvido su contraseña</string>
+	<string name="tv_user">Usuario</string>
+	<string name="tv_pass">Contraseña</string>
+	<string name="tv_registro">Registrarse</string>
+
+<!-- NEW USER -->
 	
+	<string name="tv_nombre">Nombre</string>
+	<string name="tv_apellido">Apellido</string>
+	<string name="tv_cedula">Cedula</string>
+	<string name="tv_tperiodo">Tipo de periodo</string>
+	<string name="tv_n_user">Usuario</string>
+	<string name="tv_n_pass">Contraseña</string>
+	<string name="tv_r_pass">Vuelva a escribir su contraseña</string>
+	
+	 	
 	
 <!-- STRINGS USADOS EN BOTONES-->
 
 <!-- LOGIN -->
-	<string name="ingresar">Ingresar</string>	
+	<string name="btn_ingresar">Ingresar</string>	
+	
+<!-- MENU -->
+	<string name="btn_admf">Administrar Facturas</string>
+	<string name="btn_ctrib">Calendario Tributario</string>
+	<string name="btn_reporte">Reportes</string>
+	<string name="btn_cuentauser">Cuentas de usuario</string>
+	<string name="btn_salir">Salir</string>	
+	
+<!-- NEW USER -->
+	<string name="btn_save">Guardar</string>
 	
 	
 <!-- STRINGS USADOS EN ACCIONES-->	
+
 <!-- LOGIN -->
-	<string name="ingreso">ingreso</string>
-	<string name="recover">recover</string>
+	<string name="act_ingreso">ingreso</string>
+	<string name="act_registro">registro</string>
+	
+
+<!-- MENU -->
+	<string name="act_admf">Administrar_Facturas</string>
+	<string name="act_ctrib">Calendario_Tributario</string>
+	<string name="act_reporte">Reportes</string>
+	<string name="act_cuentauser">Cuentas_de_usuario</string>
+	<string name="act_salir">Salir</string>	
+
+<!-- NEW USER -->
+	<string name="act_save_nuser">Guardar</string>
 </resources>

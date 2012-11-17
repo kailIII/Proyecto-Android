@@ -28,6 +28,7 @@ public class UsuarioProvider extends ContentProvider {
     public static final String _ID = "_id";
     public static final String NOMBRE = "nombre";
     public static final String APELLIDO = "apellido";
+    public static final String CEDULA = "cedula";
     public static final String PERIODO = "periodo";
     public static final String USER = "user";
     public static final String PASS = "pass";
@@ -82,9 +83,9 @@ public class UsuarioProvider extends ContentProvider {
     public String getType(Uri uri) {
         switch (uriMatcher.match(uri)) {
             case ACTIVIDADES:
-                return "vnd.android.cursor.dir/vnd.effectiveRutine."+ENTIDAD;
+                return "vnd.android.cursor.dir/vnd.sriFacture."+ENTIDAD;
             case ACTIVIDAD_ID:
-                return "vnd.android.cursor.item/vnd.effectiveRutine."+ENTIDAD;
+                return "vnd.android.cursor.item/vnd.sriFacture."+ENTIDAD;
             default:
                 return null;
         }
