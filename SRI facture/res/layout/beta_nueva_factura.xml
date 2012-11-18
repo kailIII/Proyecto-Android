@@ -21,13 +21,13 @@
 	                android:layout_height="fill_parent"
 	                android:layout_weight="1"
 	                android:text="@string/tv_numero" />
-	
+	
 	            <EditText
-	                android:id="@+id/editText1"
+	                android:id="@+id/numero"
 	                android:layout_width="0dp"
 	                android:layout_height="fill_parent"
-	                android:ems="10"
-	                android:layout_weight="1" >
+	                android:layout_weight="1"
+	                android:ems="10" >
 	
 	                <requestFocus />
 	            </EditText>
@@ -44,14 +44,15 @@
 	                android:layout_height="fill_parent"
 	                android:layout_weight="1"
 	                android:text="@string/tv_fecha" />
-	
+	
 	            <EditText
-	                android:id="@+id/editText2"
+	                android:id="@+id/fecha"
 	                android:layout_width="0dp"
 	                android:layout_height="fill_parent"
+	                android:layout_weight="1"
 	                android:ems="10"
-	                android:inputType="date"
-	                android:layout_weight="1" />
+	                android:inputType="date" />
+
 			</LinearLayout>
 			
             <LinearLayout
@@ -65,13 +66,14 @@
 	                android:layout_height="fill_parent"
 	                android:layout_weight="1"
 	                android:text="@string/tv_tgasto" />
-	
+	
 	            <EditText
-	                android:id="@+id/editText3"
+	                android:id="@+id/gasto"
 	                android:layout_width="0dp"
 	                android:layout_height="fill_parent"
-	                android:ems="10"
-	                android:layout_weight="1" />
+	                android:layout_weight="1"
+	                android:ems="10" />
+
 	        </LinearLayout>
 
             <LinearLayout
@@ -85,13 +87,14 @@
 	                android:layout_height="fill_parent"
 	                android:layout_weight="1"
 	                android:text="@string/tv_tdeducible" />
-	
+	
 	            <EditText
-	                android:id="@+id/editText4"
+	                android:id="@+id/deducible"
 	                android:layout_width="0dp"
 	                android:layout_height="fill_parent"
-	                android:ems="10"
-	                android:layout_weight="1" />
+	                android:layout_weight="1"
+	                android:ems="10" />
+
 	        </LinearLayout>
 
             <LinearLayout
@@ -105,13 +108,14 @@
 	                android:layout_height="fill_parent"
 	                android:layout_weight="1"
 	                android:text="@string/tv_ciudad" />
-	
+	
 	            <EditText
-	                android:id="@+id/editText5"
+	                android:id="@+id/ciudad"
 	                android:layout_width="0dp"
 	                android:layout_height="fill_parent"
-	                android:ems="10"
-	                android:layout_weight="1" />
+	                android:layout_weight="1"
+	                android:ems="10" />
+
 	        </LinearLayout>
 
             <LinearLayout
@@ -125,13 +129,14 @@
 	                android:layout_height="fill_parent"
 	                android:layout_weight="1"
 	                android:text="@string/tv_rucp" />
-	
+	
 	            <EditText
-	                android:id="@+id/editText6"
+	                android:id="@+id/rprov"
 	                android:layout_width="0dp"
 	                android:layout_height="fill_parent"
-	                android:ems="10"
-	                android:layout_weight="1" />
+	                android:layout_weight="1"
+	                android:ems="10" />
+
 	        </LinearLayout>
 
             <LinearLayout
@@ -146,13 +151,14 @@
 	                android:layout_height="0dp"
 	                android:layout_weight="1"
 	                android:text="@string/tv_proveedor" />
-	
+	
 	            <EditText
-	                android:id="@+id/editText7"
+	                android:id="@+id/prov"
 	                android:layout_width="fill_parent"
 	                android:layout_height="0dp"
-	                android:ems="10"
-	                android:layout_weight="1" />
+	                android:layout_weight="1"
+	                android:ems="10" />
+
 	        </LinearLayout>
 
             <LinearLayout
@@ -167,13 +173,14 @@
 	                android:layout_height="0dp"
 	                android:layout_weight="1"
 	                android:text="@string/tv_nlocal" />
-	
+	
 	            <EditText
-	                android:id="@+id/editText8"
+	                android:id="@+id/nlocal"
 	                android:layout_width="fill_parent"
 	                android:layout_height="0dp"
-	                android:ems="10"
-	                android:layout_weight="1" />
+	                android:layout_weight="1"
+	                android:ems="10" />
+
 	        </LinearLayout>
 
             <LinearLayout
@@ -188,13 +195,14 @@
 	                android:layout_height="0dp"
 	                android:layout_weight="1"
 	                android:text="@string/tv_imagen" />
-	
+	
 	            <EditText
-	                android:id="@+id/editText9"
+	                android:id="@+id/imagen"
 	                android:layout_width="fill_parent"
 	                android:layout_height="0dp"
-	                android:ems="10"
-	                android:layout_weight="1" />
+	                android:layout_weight="1"
+	                android:ems="10" />
+
 	        </LinearLayout>
 
         </LinearLayout>
@@ -204,11 +212,12 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             android:layout_weight="1" >
-
+
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="0dp" 
-                android:layout_weight="1" >
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="@string/act_dded" >
 
 	            <TextView
 	                android:id="@+id/textView10"
@@ -218,11 +227,12 @@
 	                android:text="@string/btn_ded" />
 
             </LinearLayout>
-
+
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="0dp" 
-                android:layout_weight="1" >
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="@string/act_save" >
 
 	            <TextView
 	                android:id="@+id/textView11"

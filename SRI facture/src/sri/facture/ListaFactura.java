@@ -10,23 +10,31 @@ import sri.facture.providers.FacturaProvider;
 import com.sri.facture.R;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.util.SparseBooleanArray;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Toast;
 
 /**
  * @author Ricardo X. Campozano
  *
  */
 public class ListaFactura extends ListActivity {
-	 @Override
+	
+	ListView miLista;
+	@Override
 	    public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.beta_lista_facturas);
 	        
-	        ListView miLista;
+	        
 	        DatabaseHelper usdbh = new DatabaseHelper(this, "sri-facture.db", null, 1);
 	 	 
 	 	    SQLiteDatabase db = usdbh.getWritableDatabase();
@@ -50,5 +58,46 @@ public class ListaFactura extends ListActivity {
 	 		usdbh.close();
 	        
 	    }
+	 
+	 	public void Add(View view){
+	 		Intent i = new Intent(this, NuevaFactura.class);
+	        startActivity(i);
+	 	}
+	 	
+	 	public void Edit(View view){
+	 		
+	 	}
+	 	
+	 	public void Delete(View view){
+	 		//Obtengo los elementos seleccionados de mi lista
+	        SparseBooleanArray seleccionados = miLista.getCheckedItemPositions();
+	 
+	        if(seleccionados==null || seleccionados.size()==0){
+	            //Si no había elementos seleccionados...
+	            Toast.makeText(this,"No hay elementos seleccionados",Toast.LENGTH_SHORT).show();
+	        }else{
+	            //si los había, miro sus valores            
+	           	 
+	            //Recorro my "array" de elementos seleccionados
+	            final int size=seleccionados.size();
+	            for (int i=0; i<size; i++) {
+	                //Si valueAt(i) es true, es que estaba seleccionado
+	                if (seleccionados.valueAt(i)) {
+	                    //en keyAt(i) obtengo su posición
+	                	Cursor c=(Cursor)miLista.getItemAtPosition(seleccionados.keyAt(i));
+	                	
+	                    //resultado.append("El elemento "+c.getString(1)+" estaba seleccionado\n");
+	                	Log.d("my tag2" ,"yo soy "+c.getString(0));
+	                	getContentResolver().delete(Uri.parse("content://sriFacture.proveedor.Factura/factura/"+c.getString(0)),  null, null);
+	                    //miLista.refreshDrawableState();
+	                    
+	                    Intent in = new Intent(this, ListaFactura.class);
+	                    startActivity(in);
+	                    
+	                }
+	            }
+	            
+	        }
+	 	}
 
 }

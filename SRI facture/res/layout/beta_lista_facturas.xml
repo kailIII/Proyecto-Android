@@ -28,12 +28,13 @@
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" >
-
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1" >
+                    android:layout_weight="1"
+                    android:onClick="@string/act_add"
+                    android:orientation="vertical" >
 
                     <TextView
                         android:id="@+id/textView1"
@@ -43,12 +44,13 @@
                         android:text="@string/tv_add" />
 
                 </LinearLayout>
-
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1" >
+                    android:layout_weight="1"
+                    android:onClick="@string/act_edit"
+                    android:orientation="vertical" >
 
                     <TextView
                         android:id="@+id/textView2"
@@ -59,12 +61,13 @@
                         android:text="@string/tv_edit" />
 
                 </LinearLayout>
-
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1" >
+                    android:layout_weight="1"
+                    android:onClick="@string/act_delete"
+                    android:orientation="vertical" >
 
                     <TextView
                         android:id="@+id/textView3"

@@ -20,24 +20,30 @@ public final class R {
     public static final class id {
         public static final int apellido=0x7f07000a;
         public static final int cedula=0x7f07000b;
-        public static final int contactID=0x7f07001d;
-        public static final int contactName=0x7f07001e;
-        public static final int editText1=0x7f070011;
-        public static final int editText2=0x7f070012;
-        public static final int editText3=0x7f070013;
-        public static final int editText4=0x7f070014;
-        public static final int editText5=0x7f070015;
-        public static final int editText6=0x7f070016;
-        public static final int editText7=0x7f070017;
-        public static final int editText8=0x7f070018;
-        public static final int editText9=0x7f07001a;
+        public static final int ciudad=0x7f070015;
+        public static final int contactID=0x7f070023;
+        public static final int contactName=0x7f070024;
+        public static final int deducible=0x7f070014;
+        public static final int editText1=0x7f07001d;
+        public static final int editText2=0x7f07001e;
+        public static final int editText3=0x7f07001f;
+        public static final int editText4=0x7f070020;
+        public static final int editText5=0x7f070021;
+        public static final int editText6=0x7f070022;
+        public static final int fecha=0x7f070012;
+        public static final int gasto=0x7f070013;
+        public static final int imagen=0x7f07001a;
         public static final int ingresar=0x7f070005;
-        public static final int menu_settings=0x7f07001f;
+        public static final int menu_settings=0x7f070025;
+        public static final int nlocal=0x7f070018;
         public static final int nombre=0x7f070009;
+        public static final int numero=0x7f070011;
         public static final int pass=0x7f070004;
         public static final int periodo=0x7f07000c;
+        public static final int prov=0x7f070017;
         public static final int recover=0x7f070006;
         public static final int rpass=0x7f07000f;
+        public static final int rprov=0x7f070016;
         public static final int textView1=0x7f070000;
         public static final int textView10=0x7f07001b;
         public static final int textView11=0x7f07001c;
@@ -65,25 +71,36 @@ public final class R {
         public static final int activity_main=0x7f060000;
     }
     public static final class string {
+        /**  LISTA DE FACTURAS 
+         */
+        public static final int act_add=0x7f040030;
         /**  MENU 
          */
-        public static final int act_admf=0x7f040029;
-        public static final int act_ctrib=0x7f04002a;
-        public static final int act_cuentauser=0x7f04002c;
+        public static final int act_admf=0x7f04002a;
+        public static final int act_ctrib=0x7f04002b;
+        public static final int act_cuentauser=0x7f04002d;
+        /**  NUEVA FACTURA 
+         */
+        public static final int act_dded=0x7f040033;
+        public static final int act_delete=0x7f040032;
+        public static final int act_edit=0x7f040031;
+        /**  LOGIN 
+         */
+        public static final int act_ingreso=0x7f040028;
+        public static final int act_registro=0x7f040029;
+        public static final int act_reporte=0x7f04002c;
+        public static final int act_salir=0x7f04002e;
         /**  
 ***********************************************************************************************
 							 STRINGS USADOS EN ACCIONES
 ***********************************************************************************************
  
- LOGIN 
+ GENERICO 
          */
-        public static final int act_ingreso=0x7f040027;
-        public static final int act_registro=0x7f040028;
-        public static final int act_reporte=0x7f04002b;
-        public static final int act_salir=0x7f04002d;
+        public static final int act_save=0x7f040027;
         /**  NEW USER 
          */
-        public static final int act_save_nuser=0x7f04002e;
+        public static final int act_save_nuser=0x7f04002f;
         public static final int app_name=0x7f040000;
         /**  MENU 
          */

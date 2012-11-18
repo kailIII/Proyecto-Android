@@ -83,6 +83,9 @@
 ***********************************************************************************************
  -->	
 
+<!-- GENERICO -->
+	<string name="act_save">Save</string>
+	
 <!-- LOGIN -->
 	<string name="act_ingreso">ingreso</string>
 	<string name="act_registro">registro</string>
@@ -97,4 +100,13 @@
 
 <!-- NEW USER -->
 	<string name="act_save_nuser">Guardar</string>
+	
+<!-- LISTA DE FACTURAS -->
+	<string name="act_add">Add</string>
+	<string name="act_edit">Edit</string>
+	<string name="act_delete">Delete</string>
+
+<!-- NUEVA FACTURA -->
+	<string name="act_dded">detDeducibles</string>	
+
 </resources>

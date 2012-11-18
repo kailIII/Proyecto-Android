@@ -4,8 +4,6 @@ package sri.facture;
 
 
 import sri.facture.bd.DatabaseHelper;
-import sri.facture.providers.CategoriaProvider;
-
 
 import com.sri.facture.R;
 
@@ -47,7 +45,8 @@ public class MainActivity extends Activity {
         	SQLiteDatabase db = usdbh.getWritableDatabase();
         	Cursor c =  db.rawQuery( "select * from usuario where user='"+usuario+"' and pass='"+pass+"';", null);
         	if ( c.moveToFirst() ) {
-        		Toast.makeText(this,"Ingreso exitoso", Toast.LENGTH_SHORT).show();
+        		Intent i = new Intent(this, sri.facture.Menu.class );
+                startActivity(i);
         	}
         	else{
         		Toast.makeText(this,"Usuario o clave incorrecta", Toast.LENGTH_SHORT).show();
