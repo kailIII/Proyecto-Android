@@ -50,7 +50,7 @@ public class MainActivity extends Activity {
         		Toast.makeText(this,"Ingreso exitoso", Toast.LENGTH_SHORT).show();
         	}
         	else{
-        		Toast.makeText(this,"Redirigiendo a nuevo usuario", Toast.LENGTH_SHORT).show();
+        		Toast.makeText(this,"Usuario o clave incorrecta", Toast.LENGTH_SHORT).show();
         	}
         	usdbh.close();
 
@@ -63,4 +63,6 @@ public class MainActivity extends Activity {
     	Intent i = new Intent(this, NewUser.class);
         startActivity(i);
     }
+    
+    
 }

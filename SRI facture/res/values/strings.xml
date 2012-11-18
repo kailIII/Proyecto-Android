@@ -4,7 +4,15 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
-<!-- STRINGS USADOS PARA TEXTVIEWS-->
+    
+<!-- 
+****************************************************************************************
+							STRINGS USADOS PARA TEXTVIEWS 
+****************************************************************************************
+-->
+
+<!-- GENERICO -->
+	<string name="tv_tdeducible">Total deducible</string> 
 
 <!-- LOGIN -->
 
@@ -22,9 +30,36 @@
 	<string name="tv_n_pass">Contraseña</string>
 	<string name="tv_r_pass">Vuelva a escribir su contraseña</string>
 	
-	 	
-	
-<!-- STRINGS USADOS EN BOTONES-->
+<!-- LISTA DE FACTURAS -->
+	<string name="tv_add">Añadir</string>
+	<string name="tv_edit">Editar</string>
+	<string name="tv_delete">Eliminar</string>	 	
+
+<!-- NUEVA FACTURA -->
+	<string name="tv_numero">Numero</string>
+	<string name="tv_fecha">Fecha</string>
+	<string name="tv_tgasto">Total Gasto</string>
+	<string name="tv_rucp">RUC del proveedor</string>
+	<string name="tv_ciudad">Ciudad</string>
+	<string name="tv_proveedor">Proveedor</string>
+	<string name="tv_nlocal">Nombre del local</string>
+	<string name="tv_imagen">Imagen</string>
+		
+<!-- NUEVO DEDUCIBLE -->	
+	<string name="tv_talimentacion">Total alimentacion</string>
+	<string name="tv_teducacion">Total educación</string>
+	<string name="tv_tsalud">Total salud</string>
+	<string name="tv_tvestimenta">Total vestimenta</string>
+	<string name="tv_tvivienda">Total vivienda</string>
+
+<!--
+*******************************************************************************************
+							 STRINGS USADOS EN BOTONES 
+*******************************************************************************************
+-->
+
+<!-- GENERICO -->
+	<string name="btn_guardar">Guardar</string>
 
 <!-- LOGIN -->
 	<string name="btn_ingresar">Ingresar</string>	
@@ -37,10 +72,16 @@
 	<string name="btn_salir">Salir</string>	
 	
 <!-- NEW USER -->
-	<string name="btn_save">Guardar</string>
+	
+<!-- NUEVA FACTURA -->
+	<string name="btn_ded">Detalle de deducibles</string>
 	
 	
-<!-- STRINGS USADOS EN ACCIONES-->	
+<!-- 
+***********************************************************************************************
+							 STRINGS USADOS EN ACCIONES
+***********************************************************************************************
+ -->	
 
 <!-- LOGIN -->
 	<string name="act_ingreso">ingreso</string>

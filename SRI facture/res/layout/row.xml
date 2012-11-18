@@ -1,0 +1,16 @@
+<sri.graphics.CheckedLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/selector_filas" >
+    
+
+	    <TextView
+	        android:id="@+id/contactID"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_horizontal" />
+							
+		<TextView android:id="@+id/contactName" android:textStyle="bold"
+			android:layout_width="match_parent" android:layout_height="wrap_content" />
+</sri.graphics.CheckedLinearLayout>

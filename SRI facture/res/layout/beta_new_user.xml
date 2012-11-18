@@ -115,13 +115,13 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:onClick="@string/act_save_nuser" >
-
+
                 <TextView
                     android:id="@+id/textView8"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/btn_save" />
+                    android:text="@string/btn_guardar" />
 
             </LinearLayout>
 
