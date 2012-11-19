@@ -28,6 +28,7 @@ import android.widget.Toast;
  */
 public class ListaFactura extends ListActivity {
 	
+	String id_user="0"; 
 	ListView miLista;
 	@Override
 	    public void onCreate(Bundle savedInstanceState) {
@@ -35,12 +36,16 @@ public class ListaFactura extends ListActivity {
 	        setContentView(R.layout.beta_lista_facturas);
 	        
 	        
+	        Bundle extras = getIntent().getExtras();
+	        if(extras!=null){
+	            id_user = extras.getString("id_user");
+	        }
+	        
 	        DatabaseHelper usdbh = new DatabaseHelper(this, "sri-facture.db", null, 1);
-	 	 
-	 	    SQLiteDatabase db = usdbh.getWritableDatabase();
+	        SQLiteDatabase db = usdbh.getWritableDatabase();
 	 		
  	        Cursor c;
- 	        c =  db.rawQuery( "select * from factura", null);
+ 	        c =  db.rawQuery( "select * from factura where id_usuario='"+id_user+"';", null);
 	 	        
 	 		String[] columns = new String[] {
 	 				
@@ -61,7 +66,9 @@ public class ListaFactura extends ListActivity {
 	 
 	 	public void Add(View view){
 	 		Intent i = new Intent(this, NuevaFactura.class);
+	 		i.putExtra("id_user", id_user);
 	        startActivity(i);
+	        finish();
 	 	}
 	 	
 	 	public void Edit(View view){
@@ -91,8 +98,11 @@ public class ListaFactura extends ListActivity {
 	                	getContentResolver().delete(Uri.parse("content://sriFacture.proveedor.Factura/factura/"+c.getString(0)),  null, null);
 	                    //miLista.refreshDrawableState();
 	                    
+	                	
 	                    Intent in = new Intent(this, ListaFactura.class);
+	                    in.putExtra("id_user", id_user);
 	                    startActivity(in);
+	                    finish();
 	                    
 	                }
 	            }

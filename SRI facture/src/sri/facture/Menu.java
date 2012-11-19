@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sri.facture.R;
@@ -23,7 +24,13 @@ public class Menu extends Activity{
     }
 	
 	public void Administrar_Facturas(View view){
+		String id_user="0"; 
+        Bundle extras = getIntent().getExtras();
+        if(extras!=null){
+            id_user = extras.getString("id_user");
+        }
     	Intent i = new Intent(this, ListaFactura.class);
+    	i.putExtra("id_user", id_user);
         startActivity(i);
     }
 

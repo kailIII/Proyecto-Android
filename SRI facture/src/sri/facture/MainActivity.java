@@ -43,16 +43,20 @@ public class MainActivity extends Activity {
     	else{
     		DatabaseHelper usdbh =  new DatabaseHelper(this, "sri-facture.db", null, 1); 	 	  
         	SQLiteDatabase db = usdbh.getWritableDatabase();
-        	Cursor c =  db.rawQuery( "select * from usuario where user='"+usuario+"' and pass='"+pass+"';", null);
+        	Cursor c =  db.rawQuery( "select _id from usuario where user='"+usuario+"' and pass='"+pass+"';", null);
         	if ( c.moveToFirst() ) {
+        		String idUser=c.getString(c.getColumnIndex("_id"));
+        		usdbh.close();
         		Intent i = new Intent(this, sri.facture.Menu.class );
+        		i.putExtra("id_user", idUser);
                 startActivity(i);
                 finish();
         	}
         	else{
+        		usdbh.close();
         		Toast.makeText(this,"Usuario o clave incorrecta", Toast.LENGTH_SHORT).show();
         	}
-        	usdbh.close();
+        	
 
     	}
 
