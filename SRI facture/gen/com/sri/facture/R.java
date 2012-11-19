@@ -21,20 +21,13 @@ public final class R {
         public static final int apellido=0x7f07000a;
         public static final int cedula=0x7f07000b;
         public static final int ciudad=0x7f070015;
-        public static final int contactID=0x7f070023;
-        public static final int contactName=0x7f070024;
-        public static final int deducible=0x7f070014;
-        public static final int editText1=0x7f07001d;
-        public static final int editText2=0x7f07001e;
-        public static final int editText3=0x7f07001f;
-        public static final int editText4=0x7f070020;
-        public static final int editText5=0x7f070021;
-        public static final int editText6=0x7f070022;
+        public static final int contactID=0x7f070022;
+        public static final int contactName=0x7f070023;
         public static final int fecha=0x7f070012;
         public static final int gasto=0x7f070013;
         public static final int imagen=0x7f07001a;
         public static final int ingresar=0x7f070005;
-        public static final int menu_settings=0x7f070025;
+        public static final int menu_settings=0x7f070024;
         public static final int nlocal=0x7f070018;
         public static final int nombre=0x7f070009;
         public static final int numero=0x7f070011;
@@ -44,6 +37,9 @@ public final class R {
         public static final int recover=0x7f070006;
         public static final int rpass=0x7f07000f;
         public static final int rprov=0x7f070016;
+        public static final int talimentacion=0x7f07001d;
+        public static final int tdeducible=0x7f070014;
+        public static final int teducacion=0x7f07001e;
         public static final int textView1=0x7f070000;
         public static final int textView10=0x7f07001b;
         public static final int textView11=0x7f07001c;
@@ -55,6 +51,9 @@ public final class R {
         public static final int textView7=0x7f07000e;
         public static final int textView8=0x7f070010;
         public static final int textView9=0x7f070019;
+        public static final int tsalud=0x7f07001f;
+        public static final int tvestimenta=0x7f070020;
+        public static final int tvivienda=0x7f070021;
         public static final int user=0x7f070003;
     }
     public static final class layout {

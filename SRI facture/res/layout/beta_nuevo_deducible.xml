@@ -20,9 +20,9 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:text="@string/tv_talimentacion" />
-
+
                 <EditText
-                    android:id="@+id/editText1"
+                    android:id="@+id/talimentacion"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
@@ -43,13 +43,14 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:text="@string/tv_teducacion" />
-
+
                 <EditText
-                    android:id="@+id/editText2"
+                    android:id="@+id/teducacion"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:ems="10" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -62,9 +63,9 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:text="@string/tv_tsalud" />
-
+
                 <EditText
-                    android:id="@+id/editText3"
+                    android:id="@+id/tsalud"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
@@ -82,13 +83,14 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:text="@string/tv_tvestimenta" />
-
+
                 <EditText
-                    android:id="@+id/editText4"
+                    android:id="@+id/tvestimenta"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:ems="10" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -101,19 +103,13 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:text="@string/tv_tvivienda" />
-
+
                 <EditText
-                    android:id="@+id/editText5"
+                    android:id="@+id/tvivienda"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:ems="10" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" >
 
             </LinearLayout>
 
@@ -121,32 +117,15 @@
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" >
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="0dp"
-                    android:layout_height="fill_parent"
-                    android:layout_weight="1"
-                    android:text="@string/tv_tdeducible" />
 
-                <EditText
-                    android:id="@+id/editText6"
-                    android:layout_width="0dp"
-                    android:layout_height="fill_parent"
-                    android:layout_weight="1"
-                    android:ems="10" />
             </LinearLayout>
-
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1" >
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:orientation="vertical"
-                android:layout_weight="1" >
+                android:layout_weight="1"
+                android:onClick="@string/act_save"
+                android:orientation="vertical" >
 
                 <TextView
                     android:id="@+id/textView7"

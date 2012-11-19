@@ -3,6 +3,7 @@
  */
 package sri.facture;
 
+import sri.facture.providers.DeducibleProvider;
 import sri.facture.providers.FacturaProvider;
 import sri.facture.providers.UsuarioProvider;
 
@@ -15,6 +16,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -25,7 +27,17 @@ public class NuevaFactura extends Activity {
 	 @Override
 	    public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
-	        setContentView(R.layout.beta_nueva_factura);       
+	        setContentView(R.layout.beta_nueva_factura);  
+	        
+	        
+	        String tdeducible="0"; 
+	        Bundle extras = getIntent().getExtras();
+	        if(extras!=null){
+	            tdeducible = extras.getString("tded");
+	            
+	            TextView ded = (TextView) findViewById(R.id.tdeducible);
+	            ded.setText(tdeducible);
+	        }
 	        
 	    }
 	 
@@ -61,6 +73,7 @@ public class NuevaFactura extends Activity {
     			
     			Uri uriNuew = getContentResolver().insert(FacturaProvider.CONTENT_URI, values);
     			
+    			guardarDeducibles();
     			//IO implemento
     			managedQuery(uriNuew, null, null, null, null);		
     			
@@ -69,6 +82,63 @@ public class NuevaFactura extends Activity {
 	 		}
 	 		
 	 	}
+	 	
+	 	public void detDeducibles(View view){
+	 		Intent i = new Intent(this, NuevoDeducible.class);
+		    startActivity(i);
+	 	}
+	 	
+	 	public void guardarDeducibles(){
+	 		String talimentacion="0";
+	        String teducacion="0"; 
+	        String tsalud="0"; 
+	        String tvestimenta="0"; 
+	        String tvivienda="0"; 
+	        
+	        Bundle extras = getIntent().getExtras();
+	        if(extras!=null){
+	            talimentacion = extras.getString("ta");
+	            teducacion = extras.getString("te");
+	            tsalud = extras.getString("ts");
+	            tvestimenta = extras.getString("tve");
+	            tvivienda = extras.getString("tvi");	            
+	        }
+	        
+	        
+	        if(!(talimentacion.equals("0"))){
+	        	deducibleItem(talimentacion,"1","1");
+	        }
+	        if(!(teducacion.equals("0"))){
+	        	deducibleItem(teducacion,"1","2");
+	        }
+	        if(!(tsalud.equals("0"))){
+	        	deducibleItem(tsalud,"1","3");
+	        }
+	        if(!(tvestimenta.equals("0"))){
+	        	deducibleItem(tvestimenta,"1","4");
+	        }
+	        if(!(tvivienda.equals("0"))){
+	        	deducibleItem(tvivienda,"1","5");
+	        }
+	        
+	        
+	 	}
+	 	
+	 	public void deducibleItem(String item,String factura,String categoria){
+	 		ContentValues values = new ContentValues();
+			
+			values.put(
+					DeducibleProvider.TOTAL,item);
+			values.put(
+					DeducibleProvider.ID_FACTURA,factura);
+			values.put(
+					DeducibleProvider.ID_CATEGORIA,categoria);
+			
+			Uri uriNuew = getContentResolver().insert(DeducibleProvider.CONTENT_URI, values);
+			managedQuery(uriNuew, null, null, null, null);
+	 	}
+	 	
+	 	
 	 	
 	 	
 

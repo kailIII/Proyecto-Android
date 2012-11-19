@@ -88,12 +88,11 @@
 	                android:layout_weight="1"
 	                android:text="@string/tv_tdeducible" />
 	
-	            <EditText
-	                android:id="@+id/deducible"
+	            <TextView
+	                android:id="@+id/tdeducible"
 	                android:layout_width="0dp"
 	                android:layout_height="fill_parent"
-	                android:layout_weight="1"
-	                android:ems="10" />
+	                android:layout_weight="1" />
 
 	        </LinearLayout>
 

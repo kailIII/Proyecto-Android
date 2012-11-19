@@ -47,6 +47,7 @@ public class MainActivity extends Activity {
         	if ( c.moveToFirst() ) {
         		Intent i = new Intent(this, sri.facture.Menu.class );
                 startActivity(i);
+                finish();
         	}
         	else{
         		Toast.makeText(this,"Usuario o clave incorrecta", Toast.LENGTH_SHORT).show();
