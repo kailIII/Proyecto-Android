@@ -77,8 +77,11 @@ public class NewUser extends Activity {
     			//IO implemento
     			managedQuery(uriNuew, null, null, null, null);		
     			
-    			Intent i = new Intent(this, Menu.class);
-    		     startActivity(i);
+    			Intent dato = new Intent();
+		        //dato.putExtra("nombre","valor");//Dato que pasaremos a la actividad principal
+		        setResult(android.app.Activity.RESULT_OK,dato );
+		        //Nos devuelve a la actividad principal "ActividadPrincipal"
+		        finish();
     		}
     		else{
     			Toast.makeText(this,"Las contraseñas no son iguales", Toast.LENGTH_SHORT).show();

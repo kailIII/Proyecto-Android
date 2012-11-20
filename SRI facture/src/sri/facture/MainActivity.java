@@ -65,7 +65,31 @@ public class MainActivity extends Activity {
     public void registro(View view){
     	//Toast.makeText(this,"Redirigiendo a recuperar contraseña", Toast.LENGTH_SHORT).show();
     	Intent i = new Intent(this, NewUser.class);
-        startActivity(i);
+        startActivityForResult(i, 1);
+    }
+    
+    protected void onActivityResult(int requestCode,int resultCode, Intent pData)            
+    {
+        if ( requestCode == 1 )//Si el código de respuesta es igual al requestCode
+            {
+            if (resultCode == Activity.RESULT_OK )//Si resultCode es igual a ok
+                {
+            	DatabaseHelper usdbh =  new DatabaseHelper(this, "sri-facture.db", null, 1); 	 	  
+            	SQLiteDatabase db = usdbh.getWritableDatabase();
+            	Cursor c =  db.rawQuery( "select _id from usuario;", null);
+            	if ( c.moveToLast() ) {
+            		String idUser=c.getString(c.getColumnIndex("_id"));
+            		usdbh.close();
+            		Intent i = new Intent(this, sri.facture.Menu.class );
+            		i.putExtra("id_user", idUser);
+                    startActivity(i);
+                    finish();
+            	}
+            	else{
+            		usdbh.close();
+            	}
+                }
+            }
     }
     
     
