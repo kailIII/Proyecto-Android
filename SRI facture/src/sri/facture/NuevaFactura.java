@@ -28,49 +28,21 @@ import android.widget.Toast;
  *
  */
 public class NuevaFactura extends Activity {
-	String id_user="0"; 
+	String id_user="0";
+	String talimentacion="0";
+    String teducacion="0"; 
+    String tsalud="0"; 
+    String tvestimenta="0"; 
+    String tvivienda="0"; 
+	
 	@Override
 	    public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.beta_nueva_factura);  
 	        
-	        String numero="";
-	        String fecha="";
-	        String tgasto="";
-	        String ciudad="";
-	        String rucp="";
-	        String prov="";
-	        String tdeducible="0";
-	        
-	        
 	        Bundle extras = getIntent().getExtras();
 	        if(extras!=null){
-	        	numero=extras.getString("numero");
-	        	//Log.d("my tag" ,"numero es "+numero);
-	        	fecha=extras.getString("fecha");
-	        	tgasto=extras.getString("tgasto");
-	        	ciudad=extras.getString("ciudad");
-	        	//Log.d("my tag" ,"ciudad eviado de n deducible "+ciudad);
-	        	rucp=extras.getString("rucp");
-	        	prov=extras.getString("prov");
-	            tdeducible = extras.getString("tded");
-	            id_user=extras.getString("id_user");
-	            
-	            EditText num =(EditText) findViewById(R.id.numero);
-	            EditText fe =(EditText) findViewById(R.id.fecha);
-	            EditText ga =(EditText) findViewById(R.id.gasto);
-	            EditText ciu =(EditText) findViewById(R.id.ciudad);
-	            EditText rp =(EditText) findViewById(R.id.rprov);
-	            EditText pro =(EditText) findViewById(R.id.prov);
-	            TextView ded = (TextView) findViewById(R.id.tdeducible);
-	            
-	            num.setText(numero);
-	            fe.setText(fecha);
-	            ga.setText(tgasto);
-	            ciu.setText(ciudad);
-	            rp.setText(rucp);
-	            pro.setText(prov);
-	            ded.setText(tdeducible);
+	        	id_user=extras.getString("id_user");                        
 	        }
 	        
 	    }
@@ -112,52 +84,23 @@ public class NuevaFactura extends Activity {
     			managedQuery(uriNuew, null, null, null, null);
     			
     			guardarDeducibles();
-    			Intent i = new Intent(this, ListaFactura.class);
-    			i.putExtra("id_user", id_user);
-    		     startActivity(i);
-    		     finish();
+    			Intent dato = new Intent();
+		        setResult(android.app.Activity.RESULT_OK,dato );
+		        finish();
 	 		}
 	 		
 	 	}
 	 	
 	 	public void detDeducibles(View view){
-	 		String numero=((EditText) findViewById(R.id.numero)).getText().toString();
-	 		String fecha="2012/05/12";
-	 		String tgasto=((EditText) findViewById(R.id.gasto)).getText().toString();
-	 		//String tdeducible=((EditText) findViewById(R.id.deducible)).getText().toString();
-	 		String ciudad=((EditText) findViewById(R.id.ciudad)).getText().toString();
-	 		String rucp=((EditText) findViewById(R.id.rprov)).getText().toString();
-	 		String prov=((EditText) findViewById(R.id.prov)).getText().toString();
-	 		
-	 		//Log.d("my tag" ,"numero enviado en detalle deducibles "+numero);
 	 		Intent i = new Intent(this, NuevoDeducible.class);
-	 		i.putExtra("numero", numero);
-	 		i.putExtra("fecha", fecha);
-	 		i.putExtra("tgasto", tgasto);
-	 		i.putExtra("ciudad", ciudad);
-	 		i.putExtra("rucp", rucp);
-	 		i.putExtra("prov", prov);
 	 		i.putExtra("id_user", id_user);
-		    startActivity(i);
-		    finish();
+		    startActivityForResult(i, 13);
+		    
 	 	}
 	 	
 	 	public void guardarDeducibles(){
-	 		String talimentacion="0";
-	        String teducacion="0"; 
-	        String tsalud="0"; 
-	        String tvestimenta="0"; 
-	        String tvivienda="0"; 
-	        
-	        Bundle extras = getIntent().getExtras();
-	        if(extras!=null){
-	            talimentacion = extras.getString("ta");
-	            teducacion = extras.getString("te");
-	            tsalud = extras.getString("ts");
-	            tvestimenta = extras.getString("tve");
-	            tvivienda = extras.getString("tvi");	            
-	        }
-	        int id=ultimoId();
+	 		
+	 		int id=ultimoId();
 	        Log.d("my tag" ,id+"");
 	        
 	        if(!(talimentacion.equals("0"))){
@@ -206,6 +149,26 @@ public class NuevaFactura extends Activity {
         	return Integer.parseInt(proxima);
 	 		
 	 	}
+	 	
+	 	protected void onActivityResult(int requestCode,int resultCode, Intent pData)            
+	    {
+	        if ( requestCode == 13 )//Si el código de respuesta es igual al requestCode
+	            {
+	            if (resultCode == Activity.RESULT_OK )//Si resultCode es igual a ok
+	                {
+		            	talimentacion = pData.getExtras().getString("ta");
+		            	teducacion = pData.getExtras().getString("te");
+		            	tsalud = pData.getExtras().getString("ts");
+		            	tvestimenta = pData.getExtras().getString("tve");
+		            	tvivienda = pData.getExtras().getString("tvi");
+	            	    String tdeducible = pData.getExtras().getString("tded");//Obtengo el string de la subactividad
+	            		TextView ded=(TextView)findViewById(R.id.tdeducible);
+	            		ded.setText(tdeducible);
+	                }
+	            }
+	    }
+	 	
+	 	
 	 	
 	 	
 	 	

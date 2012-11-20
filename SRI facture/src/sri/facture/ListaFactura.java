@@ -9,6 +9,7 @@ import sri.facture.providers.FacturaProvider;
 
 import com.sri.facture.R;
 
+import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -21,6 +22,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -76,8 +78,7 @@ public class ListaFactura extends ListActivity {
 	 	public void Add(View view){
 	 		Intent i = new Intent(this, NuevaFactura.class);
 	 		i.putExtra("id_user", id_user);
-	        startActivity(i);
-	        finish();
+	        startActivityForResult(i, 12);	        
 	 	}
 	 	
 	 	public void Edit(View view){
@@ -175,5 +176,19 @@ public class ListaFactura extends ListActivity {
             //finish();
 	 		return true;
 	 	}
+	 	
+	 	protected void onActivityResult(int requestCode,int resultCode, Intent pData)            
+	    {
+	        if ( requestCode == 12 )//Si el código de respuesta es igual al requestCode
+	            {
+	            if (resultCode == Activity.RESULT_OK )//Si resultCode es igual a ok
+	                {
+		            	Intent i = new Intent(this, ListaFactura.class);
+		            	i.putExtra("id_user", id_user);
+		                startActivity(i);
+		                finish();
+	                }
+	            }
+	    }
 
 }

@@ -30,7 +30,10 @@ public class NuevoDeducible extends Activity {
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.beta_nuevo_deducible);
 	        
-	        
+	        Bundle extras = getIntent().getExtras();
+	        if(extras!=null){
+	        	id_user=extras.getString("id_user");
+	        }
 	    }
 
 	 public void Save(View view){
@@ -65,45 +68,15 @@ public class NuevoDeducible extends Activity {
 	 		
 	 		double tded=ta+te+ts+tve+tvi;
  			
-	 		String numero="";
-	        String fecha="";
-	        String tgasto="";
-	        String ciudad="";
-	        String rucp="";
-	        String prov="";
-	        String tdeducible="0"; 
-	        
-	        Bundle extras = getIntent().getExtras();
-	        if(extras!=null){
-	        	numero=extras.getString("numero");
-	        	//Log.d("my tag" ,"numero eviado de n deducible "+numero);
-	        	fecha=extras.getString("fecha");
-	        	tgasto=extras.getString("tgasto");
-	        	ciudad=extras.getString("ciudad");
-	        	rucp=extras.getString("rucp");
-	        	prov=extras.getString("prov");
-	            tdeducible = extras.getString("tded");
-	            id_user=extras.getString("id_user");
-	            //Log.d("my tag" ,"id eviado de n deducible "+id_user);
-	        }
-	 		
-	        //Log.d("my tag" ,"numero eviado de n deducible "+numero);
- 			Intent i = new Intent(this, NuevaFactura.class);
+ 			Intent i = new Intent();
  			i.putExtra("ta", ta+"");
  	        i.putExtra("te", te+"");
  	        i.putExtra("ts", ts+"");
 	        i.putExtra("tve", tve+"");
 	        i.putExtra("tvi", tvi+"");
  	        i.putExtra("tded", tded+"");
- 	        i.putExtra("numero", numero);
-	 		i.putExtra("fecha", fecha);
-	 		i.putExtra("tgasto", tgasto);
-	 		i.putExtra("ciudad", ciudad);
-	 		i.putExtra("rucp", rucp);
-	 		i.putExtra("prov", prov);
-	 		
-	 		i.putExtra("id_user", id_user);
- 		    startActivity(i);
+ 	        
+	 		setResult(android.app.Activity.RESULT_OK,i );
 	 		finish();
 	 		
 	 	}
