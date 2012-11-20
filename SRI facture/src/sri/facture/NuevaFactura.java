@@ -46,11 +46,11 @@ public class NuevaFactura extends Activity {
 	        Bundle extras = getIntent().getExtras();
 	        if(extras!=null){
 	        	numero=extras.getString("numero");
-	        	Log.d("my tag" ,"numero es "+numero);
+	        	//Log.d("my tag" ,"numero es "+numero);
 	        	fecha=extras.getString("fecha");
 	        	tgasto=extras.getString("tgasto");
 	        	ciudad=extras.getString("ciudad");
-	        	Log.d("my tag" ,"ciudad eviado de n deducible "+ciudad);
+	        	//Log.d("my tag" ,"ciudad eviado de n deducible "+ciudad);
 	        	rucp=extras.getString("rucp");
 	        	prov=extras.getString("prov");
 	            tdeducible = extras.getString("tded");
@@ -107,10 +107,11 @@ public class NuevaFactura extends Activity {
     			
     			Uri uriNuew = getContentResolver().insert(FacturaProvider.CONTENT_URI, values);
     			
-    			guardarDeducibles();
-    			//IO implemento
-    			managedQuery(uriNuew, null, null, null, null);		
     			
+    			//IO implemento
+    			managedQuery(uriNuew, null, null, null, null);
+    			
+    			guardarDeducibles();
     			Intent i = new Intent(this, ListaFactura.class);
     			i.putExtra("id_user", id_user);
     		     startActivity(i);
@@ -128,7 +129,7 @@ public class NuevaFactura extends Activity {
 	 		String rucp=((EditText) findViewById(R.id.rprov)).getText().toString();
 	 		String prov=((EditText) findViewById(R.id.prov)).getText().toString();
 	 		
-	 		Log.d("my tag" ,"numero enviado en detalle deducibles "+numero);
+	 		//Log.d("my tag" ,"numero enviado en detalle deducibles "+numero);
 	 		Intent i = new Intent(this, NuevoDeducible.class);
 	 		i.putExtra("numero", numero);
 	 		i.putExtra("fecha", fecha);
@@ -156,22 +157,23 @@ public class NuevaFactura extends Activity {
 	            tvestimenta = extras.getString("tve");
 	            tvivienda = extras.getString("tvi");	            
 	        }
-	        int proxima=contar()+1; 
+	        int id=ultimoId();
+	        Log.d("my tag" ,id+"");
 	        
 	        if(!(talimentacion.equals("0"))){
-	        	deducibleItem(talimentacion,proxima,"1");
+	        	deducibleItem(talimentacion,id,"1");
 	        }
 	        if(!(teducacion.equals("0"))){
-	        	deducibleItem(teducacion,proxima,"2");
+	        	deducibleItem(teducacion,id,"2");
 	        }
 	        if(!(tsalud.equals("0"))){
-	        	deducibleItem(tsalud,proxima,"3");
+	        	deducibleItem(tsalud,id,"3");
 	        }
 	        if(!(tvestimenta.equals("0"))){
-	        	deducibleItem(tvestimenta,proxima,"4");
+	        	deducibleItem(tvestimenta,id,"4");
 	        }
 	        if(!(tvivienda.equals("0"))){
-	        	deducibleItem(tvivienda,proxima,"5");
+	        	deducibleItem(tvivienda,id,"5");
 	        }
 	        
 	        
@@ -191,13 +193,14 @@ public class NuevaFactura extends Activity {
 			managedQuery(uriNuew, null, null, null, null);
 	 	}
 	 	
-	 	public int contar(){
+	 	public int ultimoId(){
 	 		DatabaseHelper usdbh =  new DatabaseHelper(this, "sri-facture.db", null, 1); 	 	  
         	SQLiteDatabase db = usdbh.getWritableDatabase();
-        	Cursor c =  db.rawQuery( "select count(_id) from factura where id_usuario='"+id_user+"'", null);
+        	Cursor c =  db.rawQuery( "select _id from factura where id_usuario='"+id_user+"'", null);
         	String proxima="1";
-        	if ( c.moveToFirst() ) {
-        		proxima=c.getString(0);
+        	if ( c.moveToLast()) {
+        		proxima=c.getString(c.getColumnIndex("_id"));
+        		Log.d("my tag" ,"contar "+proxima);
         	}
         	usdbh.close();
         	return Integer.parseInt(proxima);

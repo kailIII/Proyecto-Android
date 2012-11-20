@@ -3,7 +3,7 @@
     <string name="app_name">SRI facture</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">SRI facture</string>
     
 <!-- 
 ****************************************************************************************
@@ -60,6 +60,7 @@
 
 <!-- GENERICO -->
 	<string name="btn_guardar">Guardar</string>
+	<string name="btn_editar">Editar</string>
 
 <!-- LOGIN -->
 	<string name="btn_ingresar">Ingresar</string>	
@@ -107,6 +108,9 @@
 	<string name="act_delete">Delete</string>
 
 <!-- NUEVA FACTURA -->
-	<string name="act_dded">detDeducibles</string>	
+	<string name="act_dded">detDeducibles</string>
+
+<!-- VER USUARIO -->
+	<string name="act_ed_user">editarUsuario</string>	
 
 </resources>

@@ -18,53 +18,63 @@ public final class R {
         public static final int selector_filas=0x7f020004;
     }
     public static final class id {
-        public static final int apellido=0x7f07000a;
-        public static final int cedula=0x7f07000b;
-        public static final int ciudad=0x7f070015;
-        public static final int contactID=0x7f070022;
-        public static final int contactName=0x7f070023;
-        public static final int fecha=0x7f070012;
-        public static final int gasto=0x7f070013;
-        public static final int imagen=0x7f07001a;
-        public static final int ingresar=0x7f070005;
-        public static final int menu_settings=0x7f070024;
-        public static final int nlocal=0x7f070018;
-        public static final int nombre=0x7f070009;
-        public static final int numero=0x7f070011;
-        public static final int pass=0x7f070004;
-        public static final int periodo=0x7f07000c;
-        public static final int prov=0x7f070017;
-        public static final int recover=0x7f070006;
-        public static final int rpass=0x7f07000f;
-        public static final int rprov=0x7f070016;
-        public static final int talimentacion=0x7f07001d;
-        public static final int tdeducible=0x7f070014;
-        public static final int teducacion=0x7f07001e;
+        public static final int apellido=0x7f07000f;
+        public static final int cedula=0x7f070010;
+        public static final int ciudad=0x7f070019;
+        public static final int contactID=0x7f07002a;
+        public static final int contactName=0x7f07002b;
+        public static final int eapellido=0x7f070003;
+        public static final int ecedula=0x7f070005;
+        public static final int enombre=0x7f070001;
+        public static final int eperiodo=0x7f070007;
+        public static final int fecha=0x7f070016;
+        public static final int gasto=0x7f070017;
+        public static final int imagen=0x7f07001e;
+        public static final int ingresar=0x7f07000b;
+        public static final int menu_settings=0x7f07002c;
+        public static final int nlocal=0x7f07001c;
+        public static final int nombre=0x7f07000e;
+        public static final int numero=0x7f070015;
+        public static final int pass=0x7f07000a;
+        public static final int periodo=0x7f070011;
+        public static final int prov=0x7f07001b;
+        public static final int recover=0x7f07000c;
+        public static final int rpass=0x7f070014;
+        public static final int rprov=0x7f07001a;
+        public static final int talimentacion=0x7f070021;
+        public static final int tdeducible=0x7f070018;
+        public static final int teducacion=0x7f070022;
         public static final int textView1=0x7f070000;
-        public static final int textView10=0x7f07001b;
-        public static final int textView11=0x7f07001c;
-        public static final int textView2=0x7f070001;
-        public static final int textView3=0x7f070002;
-        public static final int textView4=0x7f070007;
-        public static final int textView5=0x7f070008;
-        public static final int textView6=0x7f07000d;
-        public static final int textView7=0x7f07000e;
-        public static final int textView8=0x7f070010;
-        public static final int textView9=0x7f070019;
-        public static final int tsalud=0x7f07001f;
-        public static final int tvestimenta=0x7f070020;
-        public static final int tvivienda=0x7f070021;
-        public static final int user=0x7f070003;
+        public static final int textView10=0x7f07001f;
+        public static final int textView11=0x7f070020;
+        public static final int textView2=0x7f070002;
+        public static final int textView3=0x7f070004;
+        public static final int textView4=0x7f070006;
+        public static final int textView5=0x7f07000d;
+        public static final int textView6=0x7f070012;
+        public static final int textView7=0x7f070013;
+        public static final int textView8=0x7f070008;
+        public static final int textView9=0x7f07001d;
+        public static final int tsalud=0x7f070023;
+        public static final int tvestimenta=0x7f070024;
+        public static final int tvivienda=0x7f070025;
+        public static final int user=0x7f070009;
+        public static final int vapellido=0x7f070027;
+        public static final int vcedula=0x7f070028;
+        public static final int vnombre=0x7f070026;
+        public static final int vperiodo=0x7f070029;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int beta_lista_facturas=0x7f030001;
-        public static final int beta_login=0x7f030002;
-        public static final int beta_menu=0x7f030003;
-        public static final int beta_new_user=0x7f030004;
-        public static final int beta_nueva_factura=0x7f030005;
-        public static final int beta_nuevo_deducible=0x7f030006;
-        public static final int row=0x7f030007;
+        public static final int beta_edit_user=0x7f030001;
+        public static final int beta_lista_facturas=0x7f030002;
+        public static final int beta_login=0x7f030003;
+        public static final int beta_menu=0x7f030004;
+        public static final int beta_new_user=0x7f030005;
+        public static final int beta_nueva_factura=0x7f030006;
+        public static final int beta_nuevo_deducible=0x7f030007;
+        public static final int beta_view_user=0x7f030008;
+        public static final int row=0x7f030009;
     }
     public static final class menu {
         public static final int activity_main=0x7f060000;
@@ -72,23 +82,26 @@ public final class R {
     public static final class string {
         /**  LISTA DE FACTURAS 
          */
-        public static final int act_add=0x7f040030;
+        public static final int act_add=0x7f040031;
         /**  MENU 
          */
-        public static final int act_admf=0x7f04002a;
-        public static final int act_ctrib=0x7f04002b;
-        public static final int act_cuentauser=0x7f04002d;
+        public static final int act_admf=0x7f04002b;
+        public static final int act_ctrib=0x7f04002c;
+        public static final int act_cuentauser=0x7f04002e;
         /**  NUEVA FACTURA 
          */
-        public static final int act_dded=0x7f040033;
-        public static final int act_delete=0x7f040032;
-        public static final int act_edit=0x7f040031;
+        public static final int act_dded=0x7f040034;
+        public static final int act_delete=0x7f040033;
+        /**  VER USUARIO 
+         */
+        public static final int act_ed_user=0x7f040035;
+        public static final int act_edit=0x7f040032;
         /**  LOGIN 
          */
-        public static final int act_ingreso=0x7f040028;
-        public static final int act_registro=0x7f040029;
-        public static final int act_reporte=0x7f04002c;
-        public static final int act_salir=0x7f04002e;
+        public static final int act_ingreso=0x7f040029;
+        public static final int act_registro=0x7f04002a;
+        public static final int act_reporte=0x7f04002d;
+        public static final int act_salir=0x7f04002f;
         /**  
 ***********************************************************************************************
 							 STRINGS USADOS EN ACCIONES
@@ -96,20 +109,21 @@ public final class R {
  
  GENERICO 
          */
-        public static final int act_save=0x7f040027;
+        public static final int act_save=0x7f040028;
         /**  NEW USER 
          */
-        public static final int act_save_nuser=0x7f04002f;
+        public static final int act_save_nuser=0x7f040030;
         public static final int app_name=0x7f040000;
         /**  MENU 
          */
-        public static final int btn_admf=0x7f040021;
-        public static final int btn_ctrib=0x7f040022;
-        public static final int btn_cuentauser=0x7f040024;
+        public static final int btn_admf=0x7f040022;
+        public static final int btn_ctrib=0x7f040023;
+        public static final int btn_cuentauser=0x7f040025;
         /**  NEW USER 
  NUEVA FACTURA 
          */
-        public static final int btn_ded=0x7f040026;
+        public static final int btn_ded=0x7f040027;
+        public static final int btn_editar=0x7f040020;
         /** 
 *******************************************************************************************
 							 STRINGS USADOS EN BOTONES 
@@ -120,9 +134,9 @@ public final class R {
         public static final int btn_guardar=0x7f04001f;
         /**  LOGIN 
          */
-        public static final int btn_ingresar=0x7f040020;
-        public static final int btn_reporte=0x7f040023;
-        public static final int btn_salir=0x7f040025;
+        public static final int btn_ingresar=0x7f040021;
+        public static final int btn_reporte=0x7f040024;
+        public static final int btn_salir=0x7f040026;
         public static final int hello_world=0x7f040001;
         public static final int menu_settings=0x7f040002;
         public static final int title_activity_main=0x7f040003;

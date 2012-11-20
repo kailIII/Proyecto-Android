@@ -76,7 +76,7 @@ public class NuevoDeducible extends Activity {
 	        Bundle extras = getIntent().getExtras();
 	        if(extras!=null){
 	        	numero=extras.getString("numero");
-	        	Log.d("my tag" ,"numero eviado de n deducible "+numero);
+	        	//Log.d("my tag" ,"numero eviado de n deducible "+numero);
 	        	fecha=extras.getString("fecha");
 	        	tgasto=extras.getString("tgasto");
 	        	ciudad=extras.getString("ciudad");
@@ -84,10 +84,10 @@ public class NuevoDeducible extends Activity {
 	        	prov=extras.getString("prov");
 	            tdeducible = extras.getString("tded");
 	            id_user=extras.getString("id_user");
-	            Log.d("my tag" ,"id eviado de n deducible "+id_user);
+	            //Log.d("my tag" ,"id eviado de n deducible "+id_user);
 	        }
 	 		
-	        Log.d("my tag" ,"numero eviado de n deducible "+numero);
+	        //Log.d("my tag" ,"numero eviado de n deducible "+numero);
  			Intent i = new Intent(this, NuevaFactura.class);
  			i.putExtra("ta", ta+"");
  	        i.putExtra("te", te+"");

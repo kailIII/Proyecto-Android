@@ -36,6 +36,9 @@
         <activity android:name="sri.facture.ListaFactura"></activity>
         <activity android:name="sri.facture.NuevaFactura"></activity>
         <activity android:name="sri.facture.NuevoDeducible"></activity>
+        <activity android:name="sri.facture.EditFactura"></activity>
+        <activity android:name="sri.facture.EditUser"></activity>
+        <activity android:name="sri.facture.ViewUser"></activity>
         
     </application>
 
