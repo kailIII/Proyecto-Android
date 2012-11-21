@@ -105,10 +105,13 @@ public class ListaFactura extends ListActivity {
 	                	
 	                    //resultado.append("El elemento "+c.getString(1)+" estaba seleccionado\n");
 	                	Log.d("my tag2" ,"yo soy "+c.getString(0));
-	                	getContentResolver().delete(Uri.parse("content://sriFacture.proveedor.Factura/factura/"+c.getString(0)),  null, null);
+	                	
+	                	String id_factura=c.getString(0);
+	                	
+	                	deleteDeducibles(id_factura);
+	                	getContentResolver().delete(Uri.parse("content://sriFacture.proveedor.Factura/factura/"+id_factura),  null, null);
 	                    //miLista.refreshDrawableState();
 	                    
-	                	
 	                    Intent in = new Intent(this, ListaFactura.class);
 	                    in.putExtra("id_user", id_user);
 	                    startActivity(in);
@@ -120,66 +123,32 @@ public class ListaFactura extends ListActivity {
 	        }
 	 	}
 	 	
+	 	public void deleteDeducibles(String id_factura){
+	 		DatabaseHelper usdbh =  new DatabaseHelper(this, "sri-facture.db", null, 1); 	 	  
+	    	SQLiteDatabase db = usdbh.getWritableDatabase();
+	    	Cursor c =  db.rawQuery("select _id from deducible where id_factura='"+id_factura+"'", null);
+	    	if(c.moveToFirst()){
+	    		int row=c.getCount();
+	    		for(int i=0;i<row;i++){
+	    			getContentResolver().delete(Uri.parse("content://sriFacture.proveedor.Deducible/deducible/"+c.getString(0)),  null, null);
+	    			c.moveToNext();
+	    		}
+	    	}
+	    	usdbh.close();
+	 	}
+	 	
 	 	protected boolean onLongListItemClick(View v, int pos, long id) {
 	 		Cursor c=(Cursor)miLista.getItemAtPosition(pos);
-	 		
-	 		DatabaseHelper usdbh =  new DatabaseHelper(this, "sri-facture.db", null, 1); 	 	  
-        	SQLiteDatabase db = usdbh.getWritableDatabase();
-        	Cursor c2 =  db.rawQuery( "select * from deducible where id_factura='"+c.getString(c.getColumnIndex("_id"))+"'", null);
-        	
-        	double alimentacion=0;
-        	double educacion=0;
-        	double salud=0;
-        	double vestimenta=0;
-        	double vivienda=0;
-        	if ( c2.moveToFirst() ) {
-        		int rows= c2.getCount();
-        		for (int i=0;i<rows;i++){
-        			String item=c2.getString(c2.getColumnIndex("id_categoria"));
-        			//Log.d("my tag" ,"item "+item);
-        			String tot=c2.getString(c2.getColumnIndex("total"));
-        			//Log.d("my tag" ,"total item "+tot);
-        			Double total=Double.parseDouble(tot);
-        			switch (Integer.parseInt(item)) {
-						case 1:alimentacion=total;break;
-						case 2:educacion=total;break;
-						case 3:salud=total;break;
-						case 4:vestimenta=total;break;
-						case 5:vivienda=total;break;
-							
-						default:break;
-					}
-        			c2.moveToNext();
-        		}
-        	}
-        	usdbh.close();
-        	
-        	//Log.d("my tag" ,"alimentacion "+alimentacion+" de "+c.getString(c.getColumnIndex("_id")));
-        	double tded= alimentacion+educacion+salud+vestimenta+vivienda;
-        	//Log.d("my tag" ,"total "+tded);
 	 		Intent i = new Intent(this, EditFactura.class);
-            i.putExtra("id_user", id_user);
-            i.putExtra("id_factura", c.getString(c.getColumnIndex("_id")));
-            i.putExtra("numero", c.getString(c.getColumnIndex("numero")));
-	 		i.putExtra("fecha", c.getString(c.getColumnIndex("fecha")));
-	 		i.putExtra("tgasto", c.getString(c.getColumnIndex("total_gasto")));
-	 		i.putExtra("ciudad", c.getString(c.getColumnIndex("ciudad")));
-	 		i.putExtra("rucp", c.getString(c.getColumnIndex("ruc_proveedor")));
-	 		i.putExtra("prov", c.getString(c.getColumnIndex("n_proveedor")));
-	 		i.putExtra("ta", alimentacion+"");
- 	        i.putExtra("te", educacion+"");
- 	        i.putExtra("ts", salud+"");
-	        i.putExtra("tve", vestimenta+"");
-	        i.putExtra("tvi", vivienda+"");
- 	        i.putExtra("tded", tded+"");
-            startActivity(i);
-            //finish();
+	 		i.putExtra("id_user", id_user);
+	 		i.putExtra("id_factura", c.getString(c.getColumnIndex("_id")));
+	        startActivityForResult(i, 121);	
 	 		return true;
 	 	}
 	 	
 	 	protected void onActivityResult(int requestCode,int resultCode, Intent pData)            
 	    {
-	        if ( requestCode == 12 )//Si el código de respuesta es igual al requestCode
+	        if ( requestCode == 121 || requestCode == 12 )//Si el código de respuesta es igual al requestCode
 	            {
 	            if (resultCode == Activity.RESULT_OK )//Si resultCode es igual a ok
 	                {
@@ -189,6 +158,7 @@ public class ListaFactura extends ListActivity {
 		                finish();
 	                }
 	            }
+	        
 	    }
 
 }

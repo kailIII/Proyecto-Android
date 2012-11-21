@@ -54,6 +54,7 @@ public class Menu extends Activity{
 	public void Salir(View view){
 		Intent i = new Intent(this, MainActivity.class);
 	    startActivity(i);
+	    finish();
 	}
 
 }

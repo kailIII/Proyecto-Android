@@ -21,13 +21,14 @@
 	                android:layout_height="fill_parent"
 	                android:layout_weight="1"
 	                android:text="@string/tv_numero" />
-	
+	
 	            <EditText
 	                android:id="@+id/numero"
 	                android:layout_width="0dp"
 	                android:layout_height="fill_parent"
 	                android:layout_weight="1"
-	                android:ems="10" >
+	                android:ems="10"
+	                android:inputType="numberDecimal" >
 	
 	                <requestFocus />
 	            </EditText>
@@ -66,13 +67,14 @@
 	                android:layout_height="fill_parent"
 	                android:layout_weight="1"
 	                android:text="@string/tv_tgasto" />
-	
+	
 	            <EditText
 	                android:id="@+id/gasto"
 	                android:layout_width="0dp"
 	                android:layout_height="fill_parent"
 	                android:layout_weight="1"
-	                android:ems="10" />
+	                android:ems="10"
+	                android:inputType="numberDecimal" />
 
 	        </LinearLayout>
 

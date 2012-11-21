@@ -93,7 +93,7 @@ public class NuevaFactura extends Activity {
 	 	
 	 	public void detDeducibles(View view){
 	 		Intent i = new Intent(this, NuevoDeducible.class);
-	 		i.putExtra("id_user", id_user);
+	 		
 		    startActivityForResult(i, 13);
 		    
 	 	}

@@ -25,6 +25,12 @@ import android.widget.Toast;
  */
 public class NuevoDeducible extends Activity {
 	String id_user="0"; 
+	String alimentos="0";
+	String educacion="0";
+	String salud="0";
+	String vestimenta="0";
+	String vivienda="0";
+	
 	@Override
 	    public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
@@ -33,14 +39,35 @@ public class NuevoDeducible extends Activity {
 	        Bundle extras = getIntent().getExtras();
 	        if(extras!=null){
 	        	id_user=extras.getString("id_user");
+	        	alimentos=extras.getString("alimentos");
+	        	educacion=extras.getString("educacion");
+	        	salud=extras.getString("salud");
+	        	vestimenta=extras.getString("vestimenta");
+	        	vivienda=extras.getString("vivienda");
+	        	
+	        	llenarFormulario();
 	        }
 	    }
+	
+	 public void llenarFormulario(){
+		 EditText ta=(EditText)findViewById(R.id.talimentacion);
+		 EditText te=(EditText)findViewById(R.id.teducacion);
+		 EditText ts=(EditText)findViewById(R.id.tsalud);
+		 EditText tve=(EditText)findViewById(R.id.tvestimenta);
+		 EditText tvi=(EditText)findViewById(R.id.tvivienda);
+		 
+		 ta.setText(alimentos);
+		 te.setText(educacion);
+		 ts.setText(salud);
+		 tve.setText(vestimenta);
+		 tvi.setText(vivienda);
+	 }
 
 	 public void Save(View view){
 	 		String talimentacion=((EditText) findViewById(R.id.talimentacion)).getText().toString();
 	 		String teducacion=((EditText) findViewById(R.id.teducacion)).getText().toString();
 	 		String tsalud=((EditText) findViewById(R.id.tsalud)).getText().toString();
-	 		String tvestimenta=((EditText) findViewById(R.id.tvivienda)).getText().toString();
+	 		String tvestimenta=((EditText) findViewById(R.id.tvestimenta)).getText().toString();
 	 		String tvivienda=((EditText) findViewById(R.id.tvivienda)).getText().toString();
 	 			 		
 	 		double ta=0;

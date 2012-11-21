@@ -20,13 +20,14 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:text="@string/tv_talimentacion" />
-
+
                 <EditText
                     android:id="@+id/talimentacion"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
-                    android:ems="10" >
+                    android:ems="10"
+                    android:inputType="numberDecimal" >
 
                     <requestFocus />
                 </EditText>
@@ -43,13 +44,14 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:text="@string/tv_teducacion" />
-
+
                 <EditText
                     android:id="@+id/teducacion"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
-                    android:ems="10" />
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
 
             </LinearLayout>
 
@@ -63,13 +65,14 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:text="@string/tv_tsalud" />
-
+
                 <EditText
                     android:id="@+id/tsalud"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
-                    android:ems="10" />
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
 
             </LinearLayout>
 
@@ -83,13 +86,14 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:text="@string/tv_tvestimenta" />
-
+
                 <EditText
                     android:id="@+id/tvestimenta"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
-                    android:ems="10" />
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
 
             </LinearLayout>
 
@@ -103,13 +107,14 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:text="@string/tv_tvivienda" />
-
+
                 <EditText
                     android:id="@+id/tvivienda"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
-                    android:ems="10" />
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
 
             </LinearLayout>
 
