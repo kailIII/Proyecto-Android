@@ -1,7 +1,12 @@
 package sri.facture;
 
 
-
+/**
+ * @author Ricardo X. Campozano
+ * 			Vanessa Robles
+ * 			Ana Mora
+ *
+ */
 
 import sri.facture.bd.DatabaseHelper;
 

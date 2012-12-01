@@ -13,14 +13,14 @@
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" >
-
+
                 <TextView
                     android:id="@+id/textView1"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:text="@string/tv_talimentacion" />
-
+
                 <EditText
                     android:id="@+id/talimentacion"
                     android:layout_width="0dp"
@@ -44,7 +44,7 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:text="@string/tv_teducacion" />
-
+
                 <EditText
                     android:id="@+id/teducacion"
                     android:layout_width="0dp"
@@ -65,7 +65,7 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:text="@string/tv_tsalud" />
-
+
                 <EditText
                     android:id="@+id/tsalud"
                     android:layout_width="0dp"
@@ -86,7 +86,7 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:text="@string/tv_tvestimenta" />
-
+
                 <EditText
                     android:id="@+id/tvestimenta"
                     android:layout_width="0dp"
@@ -107,7 +107,7 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:text="@string/tv_tvivienda" />
-
+
                 <EditText
                     android:id="@+id/tvivienda"
                     android:layout_width="0dp"
@@ -124,14 +124,14 @@
                 android:layout_weight="1" >
 
             </LinearLayout>
-
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:onClick="@string/act_save"
                 android:orientation="vertical" >
-
+
                 <TextView
                     android:id="@+id/textView7"
                     android:layout_width="fill_parent"

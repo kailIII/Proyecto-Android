@@ -7,7 +7,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical" >
-
+
         <TextView
             android:id="@+id/textView1"
             android:layout_width="fill_parent"
@@ -25,7 +25,7 @@
 
 				<requestFocus />
         </EditText>
-
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="fill_parent"
@@ -40,14 +40,14 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:ems="10" />
-
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_weight="3"
             android:onClick="@string/act_ingreso"
             android:orientation="vertical" >
-
+
             <TextView
                 android:id="@+id/ingresar"
                 android:layout_width="fill_parent"
@@ -56,14 +56,14 @@
                 android:text="@string/btn_ingresar" />
 
         </LinearLayout>
-
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:onClick="@string/act_registro"
             android:orientation="vertical" >
-
+
             <TextView
                 android:id="@+id/recover"
                 android:layout_width="fill_parent"
