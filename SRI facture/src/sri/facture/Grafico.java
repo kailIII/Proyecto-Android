@@ -26,7 +26,7 @@ import android.widget.LinearLayout;
 
 /**
  * @author Ricardo X. Campozano
- *
+ *	Grafico usando la libreria acharengine
  */
 public class Grafico extends Activity {
 private GraphicalView mChartView;

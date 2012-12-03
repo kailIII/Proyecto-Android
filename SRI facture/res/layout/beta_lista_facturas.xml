@@ -3,7 +3,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" 
         android:orientation="vertical" >
-
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -14,7 +14,7 @@
                 android:layout_height="0dp"
                 android:orientation="vertical" 
                 android:layout_weight="6" >
-
+
                 <ListView
                     android:id="@+id/android:list"
                     android:layout_width="match_parent"
@@ -28,7 +28,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" >
-
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
@@ -36,7 +36,7 @@
                     android:onClick="@string/act_add"
                     android:orientation="vertical"
                     android:paddingRight="@dimen/padding_small" >
-
+
                     <TextView
                         android:id="@+id/textView1"
                         android:layout_width="fill_parent"
@@ -48,7 +48,7 @@
                         android:textSize="@dimen/padding_large" />
 
                 </LinearLayout>
-
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
@@ -56,7 +56,7 @@
                     android:onClick="@string/act_delete"
                     android:orientation="vertical"
                     android:paddingLeft="@dimen/padding_small" >
-
+
                     <TextView
                         android:id="@+id/textView3"
                         android:layout_width="fill_parent"

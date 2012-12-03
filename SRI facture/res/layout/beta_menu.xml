@@ -4,13 +4,13 @@
         android:layout_height="fill_parent"
         android:background="#000000"
         android:orientation="vertical" >
-
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:background="#000033"
             android:orientation="vertical" >
-
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
@@ -18,7 +18,7 @@
                 android:onClick="@string/act_admf"
                 android:paddingBottom="@dimen/padding_small"
                 android:paddingTop="@dimen/padding_small" >
-
+
                 <TextView
                     android:id="@+id/textView1"
                     android:layout_width="fill_parent"
@@ -31,14 +31,14 @@
                     android:textSize="@dimen/padding_large" />
 
             </LinearLayout>
-
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:onClick="calTrib"
                 android:paddingBottom="@dimen/padding_small" >
-
+
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="fill_parent"
@@ -49,14 +49,14 @@
                     android:textSize="@dimen/padding_large" />
 
             </LinearLayout>
-
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:onClick="@string/act_reporte"
                 android:paddingBottom="@dimen/padding_small" >
-
+
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="fill_parent"
@@ -67,14 +67,14 @@
                     android:textSize="@dimen/padding_large" />
 
             </LinearLayout>
-
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:onClick="@string/act_cuentauser"
                 android:paddingBottom="@dimen/padding_small" >
-
+
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="fill_parent"
@@ -85,7 +85,7 @@
                     android:textSize="@dimen/padding_large" />
 
             </LinearLayout>
-
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
@@ -93,7 +93,7 @@
                 android:onClick="@string/act_salir"
                 android:paddingBottom="@dimen/padding_small"
                 android:paddingTop="@dimen/padding_small" >
-
+
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="fill_parent"
