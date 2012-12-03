@@ -53,10 +53,11 @@ public class ListaFactura extends ListActivity {
 	 		String[] columns = new String[] {
 	 				
 	 				FacturaProvider.NUMERO,
-	 				FacturaProvider.FECHA
+	 				FacturaProvider.FECHA,
+	 				FacturaProvider.TOTAL_GASTO
 	 					 				
 	 				 };
-	 		int[] views = new int[] {R.id.contactID, R.id.contactName };
+	 		int[] views = new int[] {R.id.rnum, R.id.rfecha, R.id.rtotal };
 
 	 		SimpleCursorAdapter adapter = new SimpleCursorAdapter(this,R.layout.row, c, columns, views);
 	 		miLista=this.getListView();

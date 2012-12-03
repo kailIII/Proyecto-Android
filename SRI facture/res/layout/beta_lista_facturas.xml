@@ -28,36 +28,44 @@
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" >
-
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:onClick="@string/act_add"
-                    android:orientation="vertical" >
-
+                    android:orientation="vertical"
+                    android:paddingRight="@dimen/padding_small" >
+
                     <TextView
                         android:id="@+id/textView1"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
+                        android:background="#000033"
                         android:gravity="center_vertical|center_horizontal"
-                        android:text="@string/tv_add" />
+                        android:text="@string/tv_add"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/padding_large" />
 
                 </LinearLayout>
-
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:onClick="@string/act_delete"
-                    android:orientation="vertical" >
-
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_small" >
+
                     <TextView
                         android:id="@+id/textView3"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
+                        android:background="#000033"
                         android:gravity="center_vertical|center_horizontal"
-                        android:text="@string/tv_delete" />
+                        android:text="@string/tv_delete"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/padding_large" />
 
                 </LinearLayout>
 

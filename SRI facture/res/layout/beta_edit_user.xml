@@ -8,14 +8,15 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical" >
-
-
+
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="@string/tv_nombre" />
+                android:gravity="bottom"
+                android:text="@string/tv_nombre"
+                android:textSize="@dimen/padding_large" />
 
             <EditText
                 android:id="@+id/enombre"
@@ -26,14 +27,15 @@
 
                 <requestFocus />
             </EditText>
-
-
+
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="@string/tv_apellido" />
+                android:gravity="bottom"
+                android:text="@string/tv_apellido"
+                android:textSize="@dimen/padding_large" />
 
             <EditText
                 android:id="@+id/eapellido"
@@ -41,13 +43,15 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:ems="10" />
-
+
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="@string/tv_cedula" />
+                android:gravity="bottom"
+                android:text="@string/tv_cedula"
+                android:textSize="@dimen/padding_large" />
 
             <EditText
                 android:id="@+id/ecedula"
@@ -56,13 +60,15 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="number" />
-
+
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="@string/tv_tperiodo" />
+                android:gravity="bottom"
+                android:text="@string/tv_tperiodo"
+                android:textSize="@dimen/padding_large" />
 
             <Spinner
                 android:id="@+id/eperiodo"
@@ -75,18 +81,16 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:onClick="@string/act_save_nuser" >
-
-
-
-
-
-
+
                 <TextView
                     android:id="@+id/textView8"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:background="#000033"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/btn_guardar" />
+                    android:text="@string/btn_guardar"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/padding_large" />
 
             </LinearLayout>
 

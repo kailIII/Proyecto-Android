@@ -8,55 +8,69 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical" >
-
+
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="@string/tv_nombre" />
+                android:gravity="bottom"
+                android:text="@string/tv_nombre"
+                android:textSize="@dimen/padding_large" />
 
             <TextView
                 android:id="@+id/vnombre"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
-
+
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="@string/tv_apellido" />
+                android:gravity="bottom"
+                android:text="@string/tv_apellido"
+                android:textSize="@dimen/padding_large" />
 
             <TextView
                 android:id="@+id/vapellido"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
-
+
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="@string/tv_cedula" />
+                android:gravity="bottom"
+                android:text="@string/tv_cedula"
+                android:textSize="@dimen/padding_large" />
 
             <TextView
                 android:id="@+id/vcedula"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
-
+
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="@string/tv_tperiodo" />
+                android:gravity="bottom"
+                android:text="@string/tv_tperiodo"
+                android:textSize="@dimen/padding_large" />
 
             <TextView
                 android:id="@+id/vperiodo"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/textView2"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
@@ -67,13 +81,16 @@
                 android:layout_weight="1"
                 android:onClick="@string/act_ed_user"
                 android:orientation="vertical" >
-
+
                 <TextView
                     android:id="@+id/textView9"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:background="#000033"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/btn_editar" />
+                    android:text="@string/btn_editar"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/padding_large" />
 
             </LinearLayout>
 

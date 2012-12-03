@@ -1,0 +1,119 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical" >
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical" >
+
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1"
+		    android:onClick="@string/act_ralimentacion"
+		    android:orientation="vertical"
+		    android:paddingBottom="@dimen/padding_small"
+		    android:paddingTop="@dimen/padding_small" >
+
+			<TextView
+			    android:id="@+id/textView1"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:background="#000033"
+			    android:gravity="center_vertical|center_horizontal"
+			    android:text="@string/tv_ralimentacion"
+			    android:textColor="#FFFFFF"
+			    android:textSize="@dimen/padding_large" />
+
+		</LinearLayout>
+
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1"
+		    android:onClick="@string/act_reducacion"
+		    android:orientation="vertical"
+		    android:paddingBottom="@dimen/padding_small"
+		    android:paddingTop="@dimen/padding_small" >
+
+			<TextView
+			    android:id="@+id/textView2"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:background="#000033"
+			    android:gravity="center_vertical|center_horizontal"
+			    android:text="@string/tv_reducacion"
+			    android:textColor="#FFFFFF"
+			    android:textSize="@dimen/padding_large" />
+
+		</LinearLayout>
+
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1"
+		    android:orientation="vertical"
+		    android:paddingBottom="@dimen/padding_small"
+		    android:paddingTop="@dimen/padding_small" >
+
+			<TextView
+			    android:id="@+id/textView3"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:background="#000033"
+			    android:gravity="center_vertical|center_horizontal"
+			    android:onClick="@string/act_rsalud"
+			    android:text="@string/tv_rsalud"
+			    android:textColor="#FFFFFF"
+			    android:textSize="@dimen/padding_large" />
+
+		</LinearLayout>
+
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1"
+		    android:onClick="@string/act_rvestimenta"
+		    android:orientation="vertical"
+		    android:paddingBottom="@dimen/padding_small"
+		    android:paddingTop="@dimen/padding_small" >
+
+			<TextView
+			    android:id="@+id/textView4"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:background="#000033"
+			    android:gravity="center_vertical|center_horizontal"
+			    android:text="@string/tv_rvestimenta"
+			    android:textColor="#FFFFFF"
+			    android:textSize="@dimen/padding_large" />
+
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1"
+		    android:onClick="@string/act_rvivienda"
+		    android:orientation="vertical"
+		    android:paddingBottom="@dimen/padding_small"
+		    android:paddingTop="@dimen/padding_small" >
+
+			<TextView
+			    android:id="@+id/textView5"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:background="#000033"
+			    android:gravity="center_vertical|center_horizontal"
+			    android:text="@string/tv_rvivienda"
+			    android:textColor="#FFFFFF"
+			    android:textSize="@dimen/padding_large" />
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>

@@ -1,85 +1,107 @@
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" 
-        android:orientation="vertical">
-
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:orientation="vertical" >
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:background="#000033"
             android:orientation="vertical" >
-
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:onClick="@string/act_admf" >
-
+                android:onClick="@string/act_admf"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small" >
+
                 <TextView
                     android:id="@+id/textView1"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:background="#E0E0E0"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/btn_admf" />
+                    android:paddingBottom="@dimen/padding_small"
+                    android:paddingTop="@dimen/padding_small"
+                    android:text="@string/btn_admf"
+                    android:textSize="@dimen/padding_large" />
 
             </LinearLayout>
-
+
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="0dp" 
-                android:layout_weight="1">
-
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/padding_small" >
+
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:background="#E0E0E0"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/btn_ctrib" />
+                    android:text="@string/btn_ctrib"
+                    android:textSize="@dimen/padding_large" />
 
             </LinearLayout>
-
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:onClick="@string/act_reporte" >
-
+                android:onClick="@string/act_reporte"
+                android:paddingBottom="@dimen/padding_small" >
+
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:background="#E0E0E0"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/btn_reporte" />
+                    android:text="@string/btn_reporte"
+                    android:textSize="@dimen/padding_large" />
 
             </LinearLayout>
-
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:onClick="@string/act_cuentauser" >
-
+                android:onClick="@string/act_cuentauser"
+                android:paddingBottom="@dimen/padding_small" >
+
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:background="#E0E0E0"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/btn_cuentauser" />
+                    android:text="@string/btn_cuentauser"
+                    android:textSize="@dimen/padding_large" />
 
             </LinearLayout>
-
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:onClick="@string/act_salir" >
-
+                android:onClick="@string/act_salir"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small" >
+
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:background="#E0E0E0"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/btn_salir" />
+                    android:paddingTop="@dimen/padding_small"
+                    android:text="@string/btn_salir"
+                    android:textSize="@dimen/padding_large" />
 
             </LinearLayout>
 

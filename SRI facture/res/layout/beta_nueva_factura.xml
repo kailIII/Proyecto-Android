@@ -14,14 +14,15 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1" >
-
+
 	            <TextView
 	                android:id="@+id/textView1"
 	                android:layout_width="0dp"
 	                android:layout_height="fill_parent"
 	                android:layout_weight="1"
 	                android:gravity="center_vertical|center_horizontal"
-	                android:text="@string/tv_numero" />
+	                android:text="@string/tv_numero"
+	                android:textSize="@dimen/padding_large" />
 
 	            <EditText
 	                android:id="@+id/numero"
@@ -39,14 +40,15 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1" >
-
+
 	            <TextView
 	                android:id="@+id/textView2"
 	                android:layout_width="0dp"
 	                android:layout_height="fill_parent"
-	                android:layout_weight="2"
+	                android:layout_weight="1.5"
 	                android:gravity="center_vertical|center_horizontal"
-	                android:text="@string/tv_fecha" />
+	                android:text="@string/tv_fecha"
+	                android:textSize="@dimen/padding_large" />
 
 	            <TextView
 	                android:id="@+id/dateDisplay"
@@ -55,13 +57,13 @@
 	                android:layout_weight="1"
 	                android:gravity="center_vertical|center_horizontal"
 	                android:text="TextView" />
-
+
 	            <Button
 	                android:id="@+id/pickDate"
 	                android:layout_width="0dp"
 	                android:layout_height="wrap_content"
 	                android:layout_weight="1"
-	                android:text="Change" />
+	                android:text="Cambiar" />
 
 			</LinearLayout>
 			
@@ -69,15 +71,15 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1" >
-
+
 	            <TextView
 	                android:id="@+id/textView3"
 	                android:layout_width="0dp"
 	                android:layout_height="fill_parent"
 	                android:layout_weight="1"
 	                android:gravity="center_vertical|center_horizontal"
-	                android:text="@string/tv_tgasto" />
-	
+	                android:text="@string/tv_tgasto"
+	                android:textSize="@dimen/padding_large" />
 
 	            <EditText
 	                android:id="@+id/gasto"
@@ -93,15 +95,15 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1" >
-
+
 	            <TextView
 	                android:id="@+id/textView4"
 	                android:layout_width="0dp"
 	                android:layout_height="fill_parent"
 	                android:layout_weight="1"
 	                android:gravity="center_vertical|center_horizontal"
-	                android:text="@string/tv_tdeducible" />
-	
+	                android:text="@string/tv_tdeducible"
+	                android:textSize="@dimen/padding_large" />
 
 	            <TextView
 	                android:id="@+id/tdeducible"
@@ -115,14 +117,15 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1" >
-
+
 	            <TextView
 	                android:id="@+id/textView6"
 	                android:layout_width="0dp"
 	                android:layout_height="fill_parent"
 	                android:layout_weight="1"
 	                android:gravity="center_vertical|center_horizontal"
-	                android:text="@string/tv_rucp" />
+	                android:text="@string/tv_rucp"
+	                android:textSize="@dimen/padding_large" />
 	
 	            <EditText
 	                android:id="@+id/rprov"
@@ -133,41 +136,48 @@
 	        </LinearLayout>
 
         </LinearLayout>
-
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="4"
             android:orientation="vertical" >
-
-
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:onClick="@string/act_dded" >
-
+                android:onClick="@string/act_dded"
+                android:paddingBottom="@dimen/padding_small" >
+
 	            <TextView
 	                android:id="@+id/textView10"
 	                android:layout_width="fill_parent"
 	                android:layout_height="fill_parent"
+	                android:background="#000033"
 	                android:gravity="center_vertical|center_horizontal"
-	                android:text="@string/btn_ded" />
+	                android:text="@string/btn_ded"
+	                android:textColor="#FFFFFF"
+	                android:textSize="@dimen/padding_large" />
 
             </LinearLayout>
-
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:onClick="@string/act_save" >
-
+                android:onClick="@string/act_save"
+                android:paddingTop="@dimen/padding_medium" >
+
 	            <TextView
 	                android:id="@+id/textView11"
 	                android:layout_width="fill_parent"
 	                android:layout_height="fill_parent"
+	                android:background="#000033"
 	                android:gravity="center_vertical|center_horizontal"
-	                android:text="@string/btn_guardar" />
+	                android:text="@string/btn_guardar"
+	                android:textColor="#FFFFFF"
+	                android:textSize="@dimen/padding_large" />
 
             </LinearLayout>
 

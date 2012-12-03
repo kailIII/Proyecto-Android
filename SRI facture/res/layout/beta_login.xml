@@ -14,7 +14,8 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center_vertical|center_horizontal"
-            android:text="@string/tv_user" />
+            android:text="@string/tv_user"
+            android:textSize="@dimen/padding_extra_large" />
 
         <Spinner
             android:id="@+id/select_user"
@@ -25,7 +26,7 @@
             android:gravity="center_vertical|center_horizontal" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/TextView01"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -34,16 +35,23 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_weight="3"
+            android:layout_weight="1"
             android:onClick="@string/act_ingreso"
-            android:orientation="vertical" >
-
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_extra_large"
+            android:paddingRight="@dimen/padding_extra_large" >
+
             <TextView
                 android:id="@+id/ingresar"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
+                android:background="#000033"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="@string/btn_ingresar" />
+                android:text="@string/btn_ingresar"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/padding_extra_large"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -52,14 +60,21 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:onClick="@string/act_registro"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_extra_large"
+            android:paddingRight="@dimen/padding_extra_large"
+            android:paddingTop="@dimen/padding_small" >
 
             <TextView
                 android:id="@+id/recover"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
+                android:background="#000033"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="@string/tv_registro" />
+                android:text="@string/tv_registro"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/padding_large"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
