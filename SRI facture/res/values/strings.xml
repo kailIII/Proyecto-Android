@@ -52,6 +52,13 @@
 	<string name="tv_tvestimenta">Total vestimenta</string>
 	<string name="tv_tvivienda">Total vivienda</string>
 
+<!-- Reportes -->
+	<string name="tv_ralimentacion">Reportes de alimentacion</string>
+	<string name="tv_reducacion">Reporte de educación</string>
+	<string name="tv_rsalud">Reporte de salud</string>
+	<string name="tv_rvestimenta">Reporte de vestimenta</string>
+	<string name="tv_rvivienda">Reporte de vivienda</string>
+	
 <!--
 *******************************************************************************************
 							 STRINGS USADOS EN BOTONES 
@@ -113,4 +120,10 @@
 <!-- VER USUARIO -->
 	<string name="act_ed_user">editarUsuario</string>	
 
+<!-- REPORTES -->
+	<string name="act_ralimentacion">Ralimentacion</string>
+	<string name="act_reducacion">Reducacion</string>
+	<string name="act_rsalud">Rsalud</string>
+	<string name="act_rvestimenta">Rvestimenta</string>
+	<string name="act_rvivienda">Rvivienda</string>	
 </resources>

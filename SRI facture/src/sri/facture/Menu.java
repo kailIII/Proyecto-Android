@@ -41,7 +41,9 @@ public class Menu extends Activity{
 	}
 	
 	public void Reportes(View view){
-		Toast.makeText(this,"Redirigiendo", Toast.LENGTH_SHORT).show();
+		Intent i = new Intent(this, Reportes.class);
+    	i.putExtra("id_user", id_user);
+        startActivity(i);
 	}
 	
 	public void Cuentas_de_usuario(View view){
@@ -56,5 +58,6 @@ public class Menu extends Activity{
 	    startActivity(i);
 	    finish();
 	}
+	
 
 }

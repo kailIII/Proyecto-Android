@@ -21,8 +21,8 @@ public final class R {
         public static final int apellido=0x7f07000f;
         public static final int cedula=0x7f070010;
         public static final int ciudad=0x7f070019;
-        public static final int contactID=0x7f07002a;
-        public static final int contactName=0x7f07002b;
+        public static final int contactID=0x7f07002b;
+        public static final int contactName=0x7f07002c;
         public static final int eapellido=0x7f070003;
         public static final int ecedula=0x7f070005;
         public static final int enombre=0x7f070001;
@@ -31,7 +31,7 @@ public final class R {
         public static final int gasto=0x7f070017;
         public static final int imagen=0x7f07001e;
         public static final int ingresar=0x7f07000b;
-        public static final int menu_settings=0x7f07002c;
+        public static final int menu_settings=0x7f07002d;
         public static final int nlocal=0x7f07001c;
         public static final int nombre=0x7f07000e;
         public static final int numero=0x7f070015;
@@ -59,10 +59,11 @@ public final class R {
         public static final int tvestimenta=0x7f070024;
         public static final int tvivienda=0x7f070025;
         public static final int user=0x7f070009;
-        public static final int vapellido=0x7f070027;
-        public static final int vcedula=0x7f070028;
-        public static final int vnombre=0x7f070026;
-        public static final int vperiodo=0x7f070029;
+        public static final int vapellido=0x7f070028;
+        public static final int vcedula=0x7f070029;
+        public static final int vnombre=0x7f070027;
+        public static final int vperiodo=0x7f07002a;
+        public static final int webView1=0x7f070026;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -73,8 +74,10 @@ public final class R {
         public static final int beta_new_user=0x7f030005;
         public static final int beta_nueva_factura=0x7f030006;
         public static final int beta_nuevo_deducible=0x7f030007;
-        public static final int beta_view_user=0x7f030008;
-        public static final int row=0x7f030009;
+        public static final int beta_view_reportes=0x7f030008;
+        public static final int beta_view_user=0x7f030009;
+        public static final int reportes=0x7f03000a;
+        public static final int row=0x7f03000b;
     }
     public static final class menu {
         public static final int activity_main=0x7f060000;
@@ -82,26 +85,33 @@ public final class R {
     public static final class string {
         /**  LISTA DE FACTURAS 
          */
-        public static final int act_add=0x7f040031;
+        public static final int act_add=0x7f040036;
         /**  MENU 
          */
-        public static final int act_admf=0x7f04002b;
-        public static final int act_ctrib=0x7f04002c;
-        public static final int act_cuentauser=0x7f04002e;
+        public static final int act_admf=0x7f040030;
+        public static final int act_ctrib=0x7f040031;
+        public static final int act_cuentauser=0x7f040033;
         /**  NUEVA FACTURA 
          */
-        public static final int act_dded=0x7f040034;
-        public static final int act_delete=0x7f040033;
+        public static final int act_dded=0x7f040039;
+        public static final int act_delete=0x7f040038;
         /**  VER USUARIO 
          */
-        public static final int act_ed_user=0x7f040035;
-        public static final int act_edit=0x7f040032;
+        public static final int act_ed_user=0x7f04003a;
+        public static final int act_edit=0x7f040037;
         /**  LOGIN 
          */
-        public static final int act_ingreso=0x7f040029;
-        public static final int act_registro=0x7f04002a;
-        public static final int act_reporte=0x7f04002d;
-        public static final int act_salir=0x7f04002f;
+        public static final int act_ingreso=0x7f04002e;
+        /**  REPORTES 
+         */
+        public static final int act_ralimentacion=0x7f04003b;
+        public static final int act_reducacion=0x7f04003c;
+        public static final int act_registro=0x7f04002f;
+        public static final int act_reporte=0x7f040032;
+        public static final int act_rsalud=0x7f04003d;
+        public static final int act_rvestimenta=0x7f04003e;
+        public static final int act_rvivienda=0x7f04003f;
+        public static final int act_salir=0x7f040034;
         /**  
 ***********************************************************************************************
 							 STRINGS USADOS EN ACCIONES
@@ -109,21 +119,21 @@ public final class R {
  
  GENERICO 
          */
-        public static final int act_save=0x7f040028;
+        public static final int act_save=0x7f04002d;
         /**  NEW USER 
          */
-        public static final int act_save_nuser=0x7f040030;
+        public static final int act_save_nuser=0x7f040035;
         public static final int app_name=0x7f040000;
         /**  MENU 
          */
-        public static final int btn_admf=0x7f040022;
-        public static final int btn_ctrib=0x7f040023;
-        public static final int btn_cuentauser=0x7f040025;
+        public static final int btn_admf=0x7f040027;
+        public static final int btn_ctrib=0x7f040028;
+        public static final int btn_cuentauser=0x7f04002a;
         /**  NEW USER 
  NUEVA FACTURA 
          */
-        public static final int btn_ded=0x7f040027;
-        public static final int btn_editar=0x7f040020;
+        public static final int btn_ded=0x7f04002c;
+        public static final int btn_editar=0x7f040025;
         /** 
 *******************************************************************************************
 							 STRINGS USADOS EN BOTONES 
@@ -131,12 +141,12 @@ public final class R {
 
  GENERICO 
          */
-        public static final int btn_guardar=0x7f04001f;
+        public static final int btn_guardar=0x7f040024;
         /**  LOGIN 
          */
-        public static final int btn_ingresar=0x7f040021;
-        public static final int btn_reporte=0x7f040024;
-        public static final int btn_salir=0x7f040026;
+        public static final int btn_ingresar=0x7f040026;
+        public static final int btn_reporte=0x7f040029;
+        public static final int btn_salir=0x7f04002b;
         public static final int hello_world=0x7f040001;
         public static final int menu_settings=0x7f040002;
         public static final int title_activity_main=0x7f040003;
@@ -162,8 +172,15 @@ public final class R {
         public static final int tv_pass=0x7f040006;
         public static final int tv_proveedor=0x7f040017;
         public static final int tv_r_pass=0x7f04000e;
+        /**  Reportes 
+         */
+        public static final int tv_ralimentacion=0x7f04001f;
+        public static final int tv_reducacion=0x7f040020;
         public static final int tv_registro=0x7f040007;
+        public static final int tv_rsalud=0x7f040021;
         public static final int tv_rucp=0x7f040015;
+        public static final int tv_rvestimenta=0x7f040022;
+        public static final int tv_rvivienda=0x7f040023;
         /**  NUEVO DEDUCIBLE 
          */
         public static final int tv_talimentacion=0x7f04001a;

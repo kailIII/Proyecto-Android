@@ -6,6 +6,8 @@
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="15" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -39,6 +41,8 @@
         <activity android:name="sri.facture.EditFactura"></activity>
         <activity android:name="sri.facture.EditUser"></activity>
         <activity android:name="sri.facture.ViewUser"></activity>
+        <activity android:name="sri.facture.Reportes"></activity>
+        <activity android:name="sri.facture.ReportesView"></activity>
         
     </application>
 
