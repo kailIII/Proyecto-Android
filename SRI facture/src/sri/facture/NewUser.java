@@ -44,16 +44,14 @@ public class NewUser extends Activity {
     	String apellido=((EditText) findViewById(R.id.apellido)).getText().toString();
 		String cedula=((EditText) findViewById(R.id.cedula)).getText().toString();
 		String periodo=((Spinner) findViewById(R.id.periodo)).getSelectedItem().toString();
-		String usuario=((EditText) findViewById(R.id.user)).getText().toString();
-		String pass=((EditText) findViewById(R.id.pass)).getText().toString();
-		String rpass=((EditText) findViewById(R.id.rpass)).getText().toString();
+		
 		String foto="default";
 		
-    	if(nombre.trim().isEmpty()||apellido.trim().isEmpty()||cedula.trim().isEmpty()||usuario.trim().isEmpty()||pass.trim().isEmpty()||rpass.trim().isEmpty()){
+    	if(nombre.trim().isEmpty()||apellido.trim().isEmpty()||cedula.trim().isEmpty()){
 			Toast.makeText(this,"Faltan campos por completar", Toast.LENGTH_SHORT).show();
 		}
     	else{
-    		if(pass.equals(rpass)){
+    		
     			ContentValues values = new ContentValues();
 				
     			values.put(
@@ -65,11 +63,11 @@ public class NewUser extends Activity {
     			values.put(
     					UsuarioProvider.PERIODO,periodo);
     			values.put(
-    					UsuarioProvider.USER,usuario);
+    					UsuarioProvider.USER,"");
     			values.put(
-    					UsuarioProvider.PASS,pass);
+    					UsuarioProvider.PASS,"");
     			values.put(
-    					UsuarioProvider.FOTO, foto);
+    					UsuarioProvider.FOTO, "");
     			
     			
     			Uri uriNuew = getContentResolver().insert(UsuarioProvider.CONTENT_URI, values);
@@ -82,10 +80,7 @@ public class NewUser extends Activity {
 		        setResult(android.app.Activity.RESULT_OK,dato );
 		        //Nos devuelve a la actividad principal "ActividadPrincipal"
 		        finish();
-    		}
-    		else{
-    			Toast.makeText(this,"Las contraseñas no son iguales", Toast.LENGTH_SHORT).show();
-    		}
+    		
     	}
 	}
 }
