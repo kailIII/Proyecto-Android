@@ -21,13 +21,16 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -212,6 +215,21 @@ public class NuevaFactura extends Activity {
 	            		ded.setText(tdeducible);
 	                }
 	            }
+	        
+	        if ( requestCode == 1234 )//Si el código de respuesta es igual al requestCode
+            {
+	            if (pData!=null )//Si resultCode es igual a ok
+	                {
+	            	/**
+	    			 * En el caso de una vista previa, obtenemos el extra ÒdataÓ del intent y 
+	    			 * lo mostramos en el ImageView
+	    			 */
+	    			if (pData.hasExtra("data")) { 
+	    				Toast toastNotifica = Toast.makeText(getApplicationContext(), "Imagen guardada en la galeria", Toast.LENGTH_LONG);
+	 	                toastNotifica.show();
+	    			}
+	                }
+            }
 	    }
 	 	
 	 // updates the date in the TextView    
@@ -239,6 +257,11 @@ public class NuevaFactura extends Activity {
 	    	return null;
 	    	}
 	 	
+	    
+	    public void Foto(View view){
+	    	Intent intent =  new Intent(MediaStore.ACTION_IMAGE_CAPTURE); 
+	    	startActivityForResult(intent, 1234);
+	    }
 	 	
 	 	
 	 	

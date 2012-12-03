@@ -44,6 +44,7 @@
 	<string name="tv_proveedor">Proveedor</string>
 	<string name="tv_nlocal">Nombre del local</string>
 	<string name="tv_imagen">Imagen</string>
+	<string name="tv_foto">Tomar foto</string>
 		
 <!-- NUEVO DEDUCIBLE -->	
 	<string name="tv_talimentacion">Total alimentacion</string>
@@ -118,6 +119,7 @@
 
 <!-- NUEVA FACTURA -->
 	<string name="act_dded">detDeducibles</string>
+	<string name="act_foto">Foto</string>
 
 <!-- VER USUARIO -->
 	<string name="act_ed_user">editarUsuario</string>	
