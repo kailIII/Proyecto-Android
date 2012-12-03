@@ -36,7 +36,9 @@ public class Menu extends Activity{
     }
 
 	public void calTrib(View view){
-		Toast.makeText(this,"Redirigiendo", Toast.LENGTH_SHORT).show();
+		Intent i = new Intent(this, Grafico.class);
+		i.putExtra("id_user", id_user);
+        startActivity(i);
 
 	}
 	

@@ -27,6 +27,7 @@ public final class R {
         public static final int TextView01=0x7f08000a;
         public static final int apellido=0x7f08000f;
         public static final int cedula=0x7f080010;
+        public static final int chart=0x7f080027;
         public static final int dateDisplay=0x7f080013;
         public static final int eapellido=0x7f080003;
         public static final int ecedula=0x7f080005;
@@ -34,16 +35,16 @@ public final class R {
         public static final int eperiodo=0x7f080007;
         public static final int gasto=0x7f080015;
         public static final int ingresar=0x7f08000b;
-        public static final int menu_settings=0x7f08002a;
+        public static final int menu_settings=0x7f08002b;
         public static final int nombre=0x7f08000e;
         public static final int numero=0x7f080012;
         public static final int periodo=0x7f080011;
         public static final int pickDate=0x7f080014;
         public static final int recover=0x7f08000c;
-        public static final int rfecha=0x7f080028;
-        public static final int rnum=0x7f080027;
+        public static final int rfecha=0x7f080029;
+        public static final int rnum=0x7f080028;
         public static final int rprov=0x7f080018;
-        public static final int rtotal=0x7f080029;
+        public static final int rtotal=0x7f08002a;
         public static final int select_user=0x7f080009;
         public static final int talimentacion=0x7f08001b;
         public static final int tdeducible=0x7f080016;
@@ -79,8 +80,9 @@ public final class R {
         public static final int beta_nuevo_deducible=0x7f030007;
         public static final int beta_view_reportes=0x7f030008;
         public static final int beta_view_user=0x7f030009;
-        public static final int reportes=0x7f03000a;
-        public static final int row=0x7f03000b;
+        public static final int grafico=0x7f03000a;
+        public static final int reportes=0x7f03000b;
+        public static final int row=0x7f03000c;
     }
     public static final class menu {
         public static final int activity_main=0x7f070000;

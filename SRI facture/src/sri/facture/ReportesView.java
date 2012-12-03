@@ -62,7 +62,7 @@ public class ReportesView extends Activity {
 		
 		DatabaseHelper usdbh =  new DatabaseHelper(this, "sri-facture.db", null, 1); 	 	  
     	SQLiteDatabase db = usdbh.getWritableDatabase();
-    	Cursor c =  db.rawQuery( "select * from factura f, deducible d where f._id=d.id_factura and d.id_categoria='"+categoria+"' order by f.fecha", null);
+    	Cursor c =  db.rawQuery( "select * from factura f, deducible d where f._id=d.id_factura and d.id_categoria='"+categoria+"' and f.id_usuario='"+id_user+"'  order by f.fecha", null);
     	if ( c.moveToFirst() ) {
     		
     		for(int i=0;i<c.getCount();i++){

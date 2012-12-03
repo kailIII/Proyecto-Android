@@ -31,13 +31,14 @@
                     android:textSize="@dimen/padding_large" />
 
             </LinearLayout>
-
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:onClick="calTrib"
                 android:paddingBottom="@dimen/padding_small" >
-
+
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="fill_parent"

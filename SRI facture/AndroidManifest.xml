@@ -43,6 +43,7 @@
         <activity android:name="sri.facture.ViewUser"></activity>
         <activity android:name="sri.facture.Reportes"></activity>
         <activity android:name="sri.facture.ReportesView"></activity>
+        <activity android:name="sri.facture.Grafico"></activity>
         
     </application>
 
