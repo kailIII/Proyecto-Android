@@ -1,0 +1,64 @@
+@charset "ISO-8859-1";
+/*CSS Document*/
+
+#cabezera{
+	
+	width:90%;
+	margin:0;
+	margin-right:5%;
+	margin-left:5%;
+	padding:0;
+	top:0;
+	background-color:GhostWhite;
+	float:right;
+}
+
+#tabla{
+	
+	width:100%;
+	margin:0;
+	padding:0;
+	top:0;
+	background-color:GhostWhite;
+	float:right;
+}
+
+#total{
+	
+	width:100%;
+	padding:0;
+	top:0;
+	background-color:GhostWhite;
+	float:right;
+}
+#footer{
+	
+	width:90%;
+	margin:0;
+	margin-right:5%;
+	margin-left:5%;
+	padding:0;
+	top:0;
+	background-color:GhostWhite;
+	float:right;
+
+}
+
+th{
+	border: 0.1em solid DarkSlateGray;
+	width:20%;
+	background-color:DarkSlateGray;
+	color:white;
+	
+}
+
+td{
+	border: 0.1em solid DarkSlateGray;
+	width:20%;
+	
+}
+
+
+#total table{
+	margin-left: 35%;
+}
