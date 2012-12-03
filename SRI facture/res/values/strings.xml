@@ -58,8 +58,10 @@
 	<string name="tv_rsalud">Reporte de salud</string>
 	<string name="tv_rvestimenta">Reporte de vestimenta</string>
 	<string name="tv_rvivienda">Reporte de vivienda</string>
-	
-<!--
+
+<!-- ViewReport -->	
+	<string name="tv_send">Enviar por mail</string>	
+<!-- 
 *******************************************************************************************
 							 STRINGS USADOS EN BOTONES 
 *******************************************************************************************
@@ -126,4 +128,7 @@
 	<string name="act_rsalud">Rsalud</string>
 	<string name="act_rvestimenta">Rvestimenta</string>
 	<string name="act_rvivienda">Rvivienda</string>	
+	
+<!-- ViewReport -->	
+	<string name="act_send">Enviar</string>	
 </resources>

@@ -12,7 +12,9 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
+import android.view.View;
 import android.webkit.WebView;
 
 /**
@@ -24,6 +26,8 @@ public class ReportesView extends Activity {
 	String id_user="0";
 	int categoria=0;
 	WebView wv;
+	String reporte;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,11 +82,11 @@ public class ReportesView extends Activity {
     		}
     	}
 		usdbh.close();		
-		String reporte="<html xmlns=\"http://www.w3.org/1999/xhtml\">"
+		reporte="<html xmlns=\"http://www.w3.org/1999/xhtml\">"
 
 		+"<head>"
 			+"<title> REPORTE DE ALIMENTOS </title>"
-			//+"<link rel=\"stylesheet\" type=\"text/css\" href=\"css/estilo.css\" />"
+			+"<link rel=\"stylesheet\" type=\"text/css\" href=\"estilo.css\" />"
 			
 			+"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\"/>"
 			+"<meta name=\"author\"  content=\"SRI Facture\" />"
@@ -111,9 +115,8 @@ public class ReportesView extends Activity {
 		+"<div id=\"total\">"
 			+"<table>"
 			+"<tr>"
-				+"<td></td>"
-				+"<td></td>"
-				+"<td>Total:</td>"
+				
+				+"<th>Total:</td>"
 				+"<td>"+total+"</td>"
 			+"</tr>"
 			+"</table>"
@@ -125,7 +128,7 @@ public class ReportesView extends Activity {
 
 		+"</body>";
 		
-		wv.loadData(reporte , "text/html", "utf-8");
+		wv.loadDataWithBaseURL("file:///android_asset/",reporte , "text/html", "utf-8",null);
 	}
 	
 	@Override
@@ -135,5 +138,13 @@ public class ReportesView extends Activity {
         setResult(android.app.Activity.RESULT_OK,dato );
         //Nos devuelve a la actividad principal "ActividadPrincipal"
         finish();
+	}
+	
+	public void Enviar(View view){
+		final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+		emailIntent.setType("text/html");
+		emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "SRI facture.- Reporte");
+		emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, Html.fromHtml(reporte));
+		startActivity(Intent.createChooser(emailIntent, "Email:"));
 	}
 }
