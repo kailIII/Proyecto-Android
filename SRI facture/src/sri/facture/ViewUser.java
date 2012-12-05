@@ -9,10 +9,12 @@ import com.sri.facture.R;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.TextView;
 
 /**
@@ -27,7 +29,8 @@ public class ViewUser extends Activity{
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.beta_view_user);
-        
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		
         Bundle extras = getIntent().getExtras();
         if(extras!=null){
             id_user = extras.getString("id_user");

@@ -31,9 +31,10 @@
 	<string name="tv_r_pass">Vuelva a escribir su contraseña</string>
 	
 <!-- LISTA DE FACTURAS -->
-	<string name="tv_add">Añadir</string>
+	<string name="tv_add"></string>
 	<string name="tv_edit">Editar</string>
-	<string name="tv_delete">Eliminar</string>	 	
+	<string name="tv_delete"></string>
+	<string name="tv_menuprincipal"></string>	 	
 
 <!-- NUEVA FACTURA -->
 	<string name="tv_numero">Numero</string>
@@ -54,11 +55,12 @@
 	<string name="tv_tvivienda">Total vivienda</string>
 
 <!-- Reportes -->
-	<string name="tv_ralimentacion">Reportes de alimentacion</string>
-	<string name="tv_reducacion">Reporte de educación</string>
-	<string name="tv_rsalud">Reporte de salud</string>
-	<string name="tv_rvestimenta">Reporte de vestimenta</string>
-	<string name="tv_rvivienda">Reporte de vivienda</string>
+	<string name="tv_ralimentacion"></string>
+	<string name="tv_reducacion"></string>
+	<string name="tv_rsalud"></string>
+	<string name="tv_rvestimenta"></string>
+	<string name="tv_rvivienda"></string>
+	<string name="tv_menu"></string>
 
 <!-- ViewReport -->	
 	<string name="tv_send">Enviar por mail</string>	
@@ -76,16 +78,16 @@
 	<string name="btn_ingresar">Ingresar</string>	
 	
 <!-- MENU -->
-	<string name="btn_admf">Administrar Facturas</string>
-	<string name="btn_ctrib">Grafico de deducibles</string>
-	<string name="btn_reporte">Reportes</string>
-	<string name="btn_cuentauser">Cuentas de usuario</string>
-	<string name="btn_salir">Salir</string>	
+	<string name="btn_admf"></string>
+	<string name="btn_ctrib"></string>
+	<string name="btn_reporte"></string>
+	<string name="btn_cuentauser"></string>
+	<string name="btn_salir"></string>	
 	
 <!-- NEW USER -->
 	
 <!-- NUEVA FACTURA -->
-	<string name="btn_ded">Detalle de deducibles</string>
+	<string name="btn_ded">Detallar</string>
 	
 	
 <!-- 
@@ -116,6 +118,7 @@
 	<string name="act_add">Add</string>
 	<string name="act_edit">Edit</string>
 	<string name="act_delete">Delete</string>
+	<string name="act_menuprincipal">MenuPrin</string>
 
 <!-- NUEVA FACTURA -->
 	<string name="act_dded">detDeducibles</string>

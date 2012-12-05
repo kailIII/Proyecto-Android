@@ -5,8 +5,10 @@ package sri.facture;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +22,7 @@ public class Menu extends Activity{
 	
 	String id_user="0";
 	public void onCreate(Bundle savedInstanceState) {
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.beta_menu);
         
@@ -56,7 +59,7 @@ public class Menu extends Activity{
 	}
 	
 	public void Salir(View view){
-		Intent i = new Intent(this, MainActivity.class);
+		Intent i = new Intent(this, Login.class);
 	    startActivity(i);
 	    finish();
 	}

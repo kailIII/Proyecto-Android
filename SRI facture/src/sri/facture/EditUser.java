@@ -11,11 +11,13 @@ import com.sri.facture.R;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -31,6 +33,7 @@ public class EditUser extends Activity{
 	String id_user="0";
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.beta_edit_user);
         
         Bundle extras = getIntent().getExtras();

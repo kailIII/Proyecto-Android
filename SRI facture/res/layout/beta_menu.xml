@@ -1,111 +1,103 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#000000"
+        android:layout_height="401dp"
+        android:layout_y="0dp"
         android:orientation="vertical" >
-
+
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:background="#000033"
-            android:orientation="vertical" >
-
-            <LinearLayout
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="@string/act_admf"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingTop="@dimen/padding_small" >
+
+            <TextView
+                android:id="@+id/textView1"
                 android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:onClick="@string/act_admf"
+                android:layout_height="fill_parent"
+                android:background="@drawable/btn_fact_up"
+                android:gravity="center_vertical|center_horizontal"
                 android:paddingBottom="@dimen/padding_small"
-                android:paddingTop="@dimen/padding_small" >
-
-                <TextView
-                    android:id="@+id/textView1"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:background="#E0E0E0"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:paddingBottom="@dimen/padding_small"
-                    android:paddingTop="@dimen/padding_small"
-                    android:text="@string/btn_admf"
-                    android:textSize="@dimen/padding_large" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:onClick="calTrib"
-                android:paddingBottom="@dimen/padding_small" >
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:background="#E0E0E0"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/btn_ctrib"
-                    android:textSize="@dimen/padding_large" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:onClick="@string/act_reporte"
-                android:paddingBottom="@dimen/padding_small" >
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:background="#E0E0E0"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/btn_reporte"
-                    android:textSize="@dimen/padding_large" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:onClick="@string/act_cuentauser"
-                android:paddingBottom="@dimen/padding_small" >
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:background="#E0E0E0"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:text="@string/btn_cuentauser"
-                    android:textSize="@dimen/padding_large" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:onClick="@string/act_salir"
-                android:paddingBottom="@dimen/padding_small"
-                android:paddingTop="@dimen/padding_small" >
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:background="#E0E0E0"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:paddingTop="@dimen/padding_small"
-                    android:text="@string/btn_salir"
-                    android:textSize="@dimen/padding_large" />
-
-            </LinearLayout>
-
+                android:paddingTop="@dimen/padding_small"
+                android:text="@string/btn_admf"
+                android:textSize="@dimen/padding_large" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="calTrib"
+            android:paddingBottom="@dimen/padding_small" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/btn_calen_up"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/btn_ctrib"
+                android:textSize="@dimen/padding_large" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="@string/act_reporte"
+            android:paddingBottom="@dimen/padding_small" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/btn_info_up"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/btn_reporte"
+                android:textSize="@dimen/padding_large" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="@string/act_cuentauser"
+            android:paddingBottom="@dimen/padding_small" >
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/btn_cuenta_up"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/btn_cuentauser"
+                android:textSize="@dimen/padding_large" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="@string/act_salir"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingTop="@dimen/padding_small" >
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/btn_cerrar"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingTop="@dimen/padding_small"
+                android:text="@string/btn_salir"
+                android:textSize="@dimen/padding_large" />
+        </LinearLayout>
     </LinearLayout>
+
+</AbsoluteLayout>

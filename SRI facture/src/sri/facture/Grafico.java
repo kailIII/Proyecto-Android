@@ -16,12 +16,14 @@ import sri.facture.bd.DatabaseHelper;
 import com.sri.facture.R;
 
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 
 import android.os.Bundle;
 
+import android.view.Window;
 import android.widget.LinearLayout;
 
 /**
@@ -34,7 +36,7 @@ private GraphicalView mChartView;
 	String id_user="0";
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.grafico);
         
         Bundle extras = getIntent().getExtras();
