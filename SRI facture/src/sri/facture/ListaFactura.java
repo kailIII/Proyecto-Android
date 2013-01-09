@@ -12,7 +12,6 @@ import com.sri.facture.R;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
@@ -20,7 +19,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.View;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
@@ -38,8 +36,8 @@ public class ListaFactura extends ListActivity {
 	@Override
 	    public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
-			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 	        setContentView(R.layout.beta_lista_facturas);
+	        
 	        
 	        Bundle extras = getIntent().getExtras();
 	        if(extras!=null){
@@ -86,11 +84,6 @@ public class ListaFactura extends ListActivity {
 	 	
 	 	public void Edit(View view){
 	 		
-	 	}
-	 	
-	 	public void MenuPrin(View view){
-	 		Intent i = new Intent(this, Menu.class);
-	 		i.putExtra("id_user", id_user);
 	 	}
 	 	
 	 	public void Delete(View view){
